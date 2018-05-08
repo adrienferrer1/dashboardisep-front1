@@ -99,9 +99,6 @@ function LoginButton(props) {
 			</div>
 
 		</form>
-
-
-
     );
 }
 function LogoutButton(props) {
