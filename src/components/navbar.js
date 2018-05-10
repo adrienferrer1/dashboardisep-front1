@@ -34,8 +34,8 @@ class Navbar extends React.Component {
 						</li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><button className="btn btn-success log">S'identifier</button></li>
-						<li><button className="btn btn-danger log">Se déconnecter </button></li>
+						<li><a className="btn btn-success log" href="/Login">S'identifier</a></li>
+						<li><a className="btn btn-danger log">Se déconnecter </a></li>
 					</ul>
 				</nav>
 			</div>
