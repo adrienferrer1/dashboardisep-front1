@@ -21,10 +21,59 @@ class App extends Component {
 
     render() {
         return (
-            <App isLogged={this.isLogged}/>
+            <div className="App" className="row">
+                <Navbar></Navbar>
+                <Menu></Menu>
+                <Router>
+                    <div className="col-xl-10">
+                        <Route path="/groupmanagement" component={Groupmanagement}/>
+                        <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
+                        <Route path="/Planification" component={Planification}/>
+                        <Route path="/Login" component={Login}/>
+                    </div>
+                </Router>
+                {/*<App isLogged={this.isLogged}/>*/}
+            </div>
         );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function App(foo) {
     const isLogged = foo.isLogged;
@@ -46,34 +95,9 @@ function App(foo) {
     }
     else{
         return(
-            <form class="row col-8 offset-2">
-                <div class="col-6">
-                    <h4> Identification</h4>
-                    <input type="text" class="form-control" placeholder="Identifiant" name="login"/>
-                    <br></br>
-                    <input type="password" class="form-control" placeholder="Mot de passe" name="password"/>
-                    <br></br>
-                    <button class="btn btn-warning">
-                        S'identifier
-                    </button>
-                </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <div className="col-6">
-                    <h4> Inscription</h4>
-                    <input type="text" className="form-control" placeholder="Identifiant" name="login"/>
-                    <br></br>
-                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
-                    <br></br>
-                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
-                    <br></br>
-                    <button className="btn btn-warning" onClick="">
-                        S'inscrire
-                    </button>
-                </div>
-            </form>
-        );
+            <div className="App" className="row">
+                <Login/>
+            </div>);
     }
 }
 
