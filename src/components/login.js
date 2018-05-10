@@ -1,76 +1,41 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-class LoginControl extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleLoginClick = this.handleLoginClick.bind(this);
-        this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLoggedIn: false};
-    }
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-    handleLoginClick() {
-        this.setState({isLoggedIn: true});
-    }
-
-    handleLogoutClick() {
-        this.setState({isLoggedIn: false});
-    }
+class Login extends React.Component {
 
     render() {
-        const isLoggedIn = this.state.isLoggedIn;
-
-        let button = null;
-        if (isLoggedIn) {
-            button = <LogoutButton onClick={this.handleLogoutClick} />;
-        } else {
-            button = <LoginButton onClick={this.handleLoginClick} />;
-        }
-
         return (
             <div>
-                <Greeting isLoggedIn={isLoggedIn} />
-                {button}
+                <form class="row col-8 offset-2">
+                    <div class="col-6">
+                        <h4> Identification</h4>
+                        <input type="text" class="form-control" placeholder="Identifiant" name="login"/>
+                        <br></br>
+                        <input type="password" class="form-control" placeholder="Mot de passe" name="password"/>
+                        <br></br>
+                        <button class="btn btn-warning">
+                            S'identifier
+                        </button>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <div className="col-6">
+                        <h4> Inscription</h4>
+                        <input type="text" className="form-control" placeholder="Identifiant" name="login"/>
+                        <br></br>
+                        <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                        <br></br>
+                        <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                        <br></br>
+                        <button className="btn btn-warning" onClick="">
+                            S'inscrire
+                        </button>
+                    </div>
+                </form>
             </div>
         );
     }
 }
-
-export default LoginControl;
-
-function UserGreeting(props) {
-    return <h1>Welcome back!</h1>;
-}
-
-function GuestGreeting(props) {
-    return <h1>Please sign up.</h1>;
-}
-
-function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-        return <UserGreeting />;
-    }
-    return <GuestGreeting />;
-}
-
-function LoginButton(props) {
-    return (
-        <button onClick={props.onClick}>
-            Login
-        </button>
-    );
-}
-
-function LogoutButton(props) {
-    return (
-        <button onClick={props.onClick}>
-            Logout
-        </button>
-    );
-}
-
-ReactDOM.render(
-    <LoginControl />,
-    document.getElementById('root')
-);
+export default Login;

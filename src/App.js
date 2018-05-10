@@ -7,112 +7,133 @@ import Menu from "./components/menu";
 import Groupmanagement from "./components/pages/groupmanagement/groupmanagement";
 import Tutorsmanagement from "./components/pages/tutorsmanagement/tutorsmanagement";
 import Planification from "./components/pages/planification/planification";
-import LoginControl from "./components/login";
+import Login from "./components/login";
 import ReactDOM from "react-dom";
+
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.handleLoginClick = this.handleLoginClick.bind(this);
-        this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLoggedIn: true};
-    }
-
-    handleLoginClick() {
-        this.setState({isLoggedIn: true});
-    }
-
-    handleLogoutClick() {
-        this.setState({isLoggedIn: false});
+        //this.handleLoginClick = this.handleLoginClick.bind(this);
+        //this.handleLogoutClick = this.handleLogoutClick.bind(this);
+        this.state = {isLogged: false};
     }
 
     render() {
-        const isLoggedIn = this.state.isLoggedIn;
-
-        let button = null;
-        if (isLoggedIn) {
-            button = <LogoutButton onClick={this.handleLogoutClick} />;
-        } else {
-            button = <LoginButton onClick={this.handleLoginClick} />;
-        }
-
         return (
-            <div>
-                <Greeting isLoggedIn={isLoggedIn} />
-                {button}
-            </div>
+            <App isLogged={this.isLogged}/>
         );
     }
 }
 
-function UserGreeting(props) {
-    return <div className="App" className="row">
-        <Navbar></Navbar>
-        <Menu></Menu>
-        <Router>
-            <div className="col-xl-10">
-                <Route path="/groupmanagement" component={Groupmanagement}/>
-                <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
-                <Route path="/Planification" component={Planification}/>
-                <Route path="/LoginControl" component={LoginControl}/>
+function App(foo) {
+    const isLogged = foo.isLogged;
+    if (isLogged == true){
+        return(
+            <div className="App" className="row">
+                <Navbar></Navbar>
+                <Menu></Menu>
+                <Router>
+                    <div className="col-xl-10">
+                        <Route path="/groupmanagement" component={Groupmanagement}/>
+                        <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
+                        <Route path="/Planification" component={Planification}/>
+                        <Route path="/Login" component={Login}/>
+                    </div>
+                </Router>
             </div>
-        </Router>
-    </div>
-}
-function GuestGreeting(props) {
-    return <h4 class="col-4"></h4>;
-}
-function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-        return <UserGreeting />;
+        )
     }
-    return <GuestGreeting />;
-}
-function LoginButton(props) {
-    return (
-    	<form class="row col-8 offset-2">
-			<div class="col-6">
-                <h4> Identification</h4>
-				<input type="text" class="form-control" placeholder="Identifiant" name="login"/>
-				<br></br>
-				<input type="password" class="form-control" placeholder="Mot de passe" name="password"/>
-				<br></br>
-				<button class="btn btn-warning" onClick={props.onClick}>
-					S'identifier
-				</button>
-			</div>
-			<br></br>
-            <br></br>
-            <br></br>
-            <div className="col-6">
-				<h4> Inscription</h4>
-				<input type="text" className="form-control" placeholder="Identifiant" name="login"/>
-				<br></br>
-				<input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
-				<br></br>
-				<input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
-				<br></br>
-				<button className="btn btn-warning" onClick="">
-					S'inscrire
-				</button>
-			</div>
-
-		</form>
-    );
-}
-function LogoutButton(props) {
-    return (
-        <button class="btn btn-warning" onClick={props.onClick}>
-            Se déconnecter
-        </button>
-    );
+    else{
+        return(
+            <form class="row col-8 offset-2">
+                <div class="col-6">
+                    <h4> Identification</h4>
+                    <input type="text" class="form-control" placeholder="Identifiant" name="login"/>
+                    <br></br>
+                    <input type="password" class="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <button class="btn btn-warning">
+                        S'identifier
+                    </button>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div className="col-6">
+                    <h4> Inscription</h4>
+                    <input type="text" className="form-control" placeholder="Identifiant" name="login"/>
+                    <br></br>
+                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <button className="btn btn-warning" onClick="">
+                        S'inscrire
+                    </button>
+                </div>
+            </form>
+        );
+    }
 }
 
-ReactDOM.render(
-    <LoginControl />,
-    document.getElementById('root')
-)
+
+
+
+// Inutile pour l'instant
+/*
+function Disp_onlog(foo){
+    if (foo=true){
+        return <div className="App" className="row">
+            <Navbar></Navbar>
+            <Menu></Menu>
+            <Router>
+                <div className="col-xl-10">
+                    <Route path="/groupmanagement" component={Groupmanagement}/>
+                    <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
+                    <Route path="/Planification" component={Planification}/>
+                    <Route path="/LoginControl" component={LoginControl}/>
+                </div>
+            </Router>
+        </div>
+    }
+    else{
+        return(
+            <form class="row col-8 offset-2">
+                <div class="col-6">
+                    <h4> Identification</h4>
+                    <input type="text" class="form-control" placeholder="Identifiant" name="login"/>
+                    <br></br>
+                    <input type="password" class="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <button class="btn btn-warning">
+                        S'identifier
+                    </button>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div className="col-6">
+                    <h4> Inscription</h4>
+                    <input type="text" className="form-control" placeholder="Identifiant" name="login"/>
+                    <br></br>
+                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <input type="password" className="form-control" placeholder="Mot de passe" name="password"/>
+                    <br></br>
+                    <button className="btn btn-warning" onClick="">
+                        S'inscrire
+                    </button>
+                </div>
+            </form>
+        );
+    }
+}
+*/
 
 
 export default App;
+
+
+
+// Ce code n'est pas encore utilisé mais il le sera bientôt. Il s'agit du formulaire authentification/inscription
