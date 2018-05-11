@@ -7,7 +7,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <form class="row col-8 offset-2">
+                <form class="row col-10 offset-2">
                     <div class="col-6">
                         <h4> Identification</h4>
                         <input type="text" class="form-control" placeholder="Identifiant" name="login"/>

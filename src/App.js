@@ -7,21 +7,19 @@ import Menu from "./components/menu";
 import Groupmanagement from "./components/pages/groupmanagement/groupmanagement";
 import Tutorsmanagement from "./components/pages/tutorsmanagement/tutorsmanagement";
 import Planification from "./components/pages/planification/planification";
+import Tracking from "./components/pages/tracking/tracking";
 import Login from "./components/login";
 import ReactDOM from "react-dom";
 
 //
 
-
-
-class App extends Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
         //this.handleLoginClick = this.handleLoginClick.bind(this);
         //this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLogged: true}; // A REMPLACER PAR LE RETOUR DE L'API
+        this.state = {isLogged: true}; // A REMPLACER PAR LE RENVOI DE L'API
     }
-
     render() {
         return (
             <div className="App" className="row">
@@ -44,6 +42,7 @@ function App_logged(foo) {
                         <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
                         <Route path="/Planification" component={Planification}/>
                         <Route path="/Login" component={Login}/>
+                        <Route path="/Tracking" component={Tracking}/>
                     </div>
                 </Router>
             </div>
@@ -56,8 +55,6 @@ function App_logged(foo) {
             </div>);
     }
 }
-
-
 
 export default App;
 

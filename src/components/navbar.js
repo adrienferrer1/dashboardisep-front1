@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
+import App from '../App';
 
-
-
-const isLoggedIn = true;
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
         //this.handleLoginClick = this.handleLoginClick.bind(this);
         //this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLoggedIn: false};
     }
 
     handleLoginClick() {
-        this.setState({isLoggedIn: true});
+        App.IsLoggedIn.setState(false);
+        console.log('hello');
     }
 
     handleLogoutClick() {
@@ -34,7 +32,7 @@ class Navbar extends React.Component {
 						</li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><a className="btn btn-success log" href="/Login">S'identifier</a></li>
+						<li><a className="btn btn-success log" href="/Login" onClick="this.handleLogInClick">S'identifier</a></li>
 						<li><a className="btn btn-danger log">Se déconnecter </a></li>
 					</ul>
 				</nav>
