@@ -1,43 +1,47 @@
 import React, { Component } from 'react';
 
-class Done_tasks extends React.Component{
-    render(){
-        return(
-            <div className="Done_tasks" className="col-6">
-                <br></br>
-                <h5> Liste des tâches </h5>
-                <table className="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col" className="col-4">Intitulé</th>
-                        <th scope="col">Date de fin théorique</th>
-                        <th scope="col">Date de fin réelle</th>
-                        <th scope="col">Durée</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Tâche 1</th>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/hh</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tâche 2</th>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/hh</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tâche 3</th>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/mm/aaaa</td>
-                        <td>jj/hh</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+
+const obj = [{
+    name: "onion",
+    price: ".99",
+    id: 1
+}, {
+    name: "pepper",
+    price: "1.25",
+    id: 2
+}, {
+    name: "broccoli",
+    price: "3.00",
+    id: 3
+}];
+
+class TableRow extends React.Component {
+    render() {
+        const {data} = this.props;
+        const row = data.map((data) =>
+            <tr>
+                <td key={data.name}>{data.name}</td>
+                <td key={data.id}>{data.id}</td>
+                <td key={data.price}>{data.price}</td>
+            </tr>
+        );
+        return (
+            <span>{row}</span>
         );
     }
 }
+
+class Done_tasks extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <table>
+                <TableRow data={this.props.data} />
+            </table>
+        );
+    }
+}
+
 export default Done_tasks;

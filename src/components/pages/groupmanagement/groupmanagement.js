@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
 import Assigntutor from './assigntutor';
 import Groupcreation from './groupcreation';
+import TutorSearch from'./tutorsearch';
 
 class Groupmanagement extends Component {
     render() {
@@ -9,10 +9,10 @@ class Groupmanagement extends Component {
     		<div className="Groupmanagement" class="row">
 	    		<Assigntutor/>
 	    		<Groupcreation/>
+          <TutorSearch/>
 	    	</div>
     		);
     }
 }
 
 export default Groupmanagement;
-

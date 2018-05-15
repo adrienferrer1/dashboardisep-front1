@@ -8,7 +8,6 @@ class Tracking extends Component {
         return (
             <div className="Tracking" class="row">
                 <Done_tasks/>
-                <Memberactivity/>
             </div>
         );
     }
