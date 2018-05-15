@@ -11,7 +11,6 @@ class Assigntutor extends React.Component {
 						<div className="col-6">
                             <Tutorsearch />
 						</div>
-
 						<button className="col-2 btn btn-primary"> Valider </button>
 					</div>
 				</div>
