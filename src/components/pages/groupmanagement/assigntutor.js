@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
+import Tutorsearch from "./tutorsearch";
 
 class Assigntutor extends React.Component {
     render() {
         return (
-        		<div class="col-xl-5">
-        		<h3>Affecter un tuteur</h3>
+        		<div class="col-5">
+				<br></br>
+        		<h5>Affecter un tuteur</h5>
         		<br></br>
-        			<div class="container row">
-						<input type="text" class="form-control col-6" placeholder="Rechercher un tuteur"/>
-						<button class="btn btn-primary col-3"> Rechercher </button>
+					<div className="row">
+						<div className="col-6">
+                            <Tutorsearch />
+						</div>
+						<button className="col-2 btn btn-primary"> Valider </button>
 					</div>
-					<br></br>
-					<button class="btn btn-primary"> Valider </button>
 				</div>
-				
+
         	);
     }
 }
