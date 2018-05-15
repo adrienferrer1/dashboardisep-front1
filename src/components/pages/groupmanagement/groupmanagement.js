@@ -9,7 +9,6 @@ class Groupmanagement extends Component {
     		<div className="Groupmanagement" class="row">
 	    		<Assigntutor/>
 	    		<Groupcreation/>
-          <TutorSearch/>
 	    	</div>
     		);
     }

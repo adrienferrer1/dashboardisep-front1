@@ -12,8 +12,8 @@ class Tutor extends React.Component {
             );
 
         return (
-         <div className="col-5" id="tutor-search">
-             <select>
+         <div className="dropdown" id="tutor-search">
+             <select className="btn btn-light">
                 {optionItems}
              </select>
          </div>

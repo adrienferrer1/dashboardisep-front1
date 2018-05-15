@@ -22,7 +22,7 @@ class Navbar extends React.Component {
         return (
         	<div className="row">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
-					<a className="col-4" href="https://www.isep.fr/"><img src ="http://www.financetesetudes.com/wp-content/uploads/2013/08/logo-isep.jpg" width="22%"/> </a>
+					<a className="col-4" href="https://www.isep.fr/"><img src ="http://www.financetesetudes.com/wp-content/uploads/2013/08/logo-isep.jpg" width="20%"/> </a>
 					<ul className="nav navbar-nav col-4">
 						<li>
 							<a href="https://educ.isep.fr/moodle/login/index.php" className="btn btn-warning log"> Moodle </a>
