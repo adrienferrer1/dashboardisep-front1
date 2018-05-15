@@ -3,7 +3,7 @@ TO-DO :
 d'un bouton "submit", qui recup les données des champ, qui les mets dans un JSON et
  qui crée une "requête" (a def avec le back) ;
 - Commencer a set-up un modèle de graphs (importer lib .js, + la faire fonctionner avec
-du JSON d'exemple en entrée ;
+du JSON d'exemple en entrée ;     https://www.fusioncharts.com/react-charts/#/demos/ex1
 - Gérer le remplissage des <table> avec du JSON ;
 - Connecter le login avec la back.
 
