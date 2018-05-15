@@ -1,5 +1,14 @@
-BACKLOG :
+TO-DO :
+- Gérer le contrôle des formulaires (ie, créer une fonction ui s'exec au clic
+d'un bouton "submit", qui recup les données des champ, qui les mets dans un JSON et
+ qui crée une "requête" (a def avec le back) ;
+- Commencer a set-up un modèle de graphs (importer lib .js, + la faire fonctionner avec
+du JSON d'exemple en entrée ;
+- Gérer le remplissage des <table> avec du JSON ;
+- Connecter le login avec la back.
 
+
+TO ENHANCE :
 - Changer bootstrap.css pour mettre la bonne couleur des boutons ;
 - Remplacer le routeur par un component ad hoc ;
-- resizing dynamique du top
+-
