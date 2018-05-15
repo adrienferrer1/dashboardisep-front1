@@ -13,7 +13,7 @@ class Assigntutor extends React.Component {
 					<br></br>
 					<button class="btn btn-primary"> Valider </button>
 				</div>
-				
+
         	);
     }
 }
