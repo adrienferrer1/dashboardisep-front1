@@ -1,5 +1,5 @@
-BACKLOG : 
+BACKLOG :
 
 - Changer bootstrap.css pour mettre la bonne couleur des boutons ;
 - Remplacer le routeur par un component ad hoc ;
-- 
+- resizing dynamique du top
