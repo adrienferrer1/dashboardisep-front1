@@ -9,15 +9,8 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.0-rc.3",
     "react-scripts": "1.1.4",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react-table": "^6.8.2"
-=======
+    "react-table": "^6.8.2",
     "react-virtualized-select": "^3.1.3"
->>>>>>> bc80409a329427b41f942100ef3fe764361b2fd8
-=======
-    "react-virtualized-select": "^3.1.3"
->>>>>>> c6e27f335ff29f7cf27f90c5b56dbe91c5a28d61
   },
   "scripts": {
     "start": "react-scripts start",
