@@ -5,95 +5,62 @@ class Tutorslist extends Component {
         super();
         this.state = {
             data: [{
-                id: 1,
-                name: "Simon Baileeykjsjkvb"
+                name: "Aymeric",
+                lastname: "De Javel",
+				email : "adejavel@isep.fr"
             }, {
-                id: 2,
-                name: "Thomas Burleson"
+                name: "Alain",
+                lastname: "Rizkallah",
+                email : "arizkallah@isep.fr"
             }, {
-                id: 3,
-                name: "Will Button"
+                name: "François",
+                lastname: "De Verdun",
+                email : "adeverdun@isep.fr"
             }, {
-                id: 4,
-                name: "Ben Clinkinbeard"
-            }, {
-                id: 5,
-                name: "Kent Dodds"
-            }, {
-                id: 6,
-                name: "Trevor Ewen"
-            }, {
-                id: 7,
-                name: "Aaron Frost"
-            }, {
-                id: 8,
-                name: "Joel Hooks"
-            }, {
-                id: 9,
-                name: "Jafar Husain"
-            }, {
-                id: 10,
-                name: "Tim Kindberg"
-            }, {
-                id: 11,
-                name: "John Lindquist"
-            }, {
-                id: 12,
-                name: "Joe Maddalone"
-            }, {
-                id: 13,
-                name: "Tyler McGinnis"
-            }, {
-                id: 14,
-                name: "Scott Moss"
-            }, {
-                id: 15,
-                name: "Robert Penner"
-            }, {
-                id: 16,
-                name: "Keith Peters"
-            }, {
-                id: 17,
-                name: "Lukas Ruebbelke"
-            }, {
-                id: 18,
-                name: "Brett Shollenberger"
+                name: "Adrien",
+                lastname: "Ferrer",
+                email : "aferrer@isep.fr"
             }]
         }
     }
     render() {
         let rows = this.state.data.map(person => {
             return <PersonRow key = {
-                person.id
-            }
-                              data = {
-                                  person
-                              }
+                person.name
+            } data = {person}
             />
         })
-        return <table >
+        return (
+        	<div className="col-5">
+                <br></br>
+				<h5>Liste des tuteurs</h5>
+        	<table className="col-xl-4 table">
+
 			<thead>
-            <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Prénom</th>
-                <th scope="col">E-mail</th>
-            </tr>
+				<tr>
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>E-mail</th>
+				</tr>
 			</thead>
             < tbody > {
                 rows
-            } < /tbody> < /table>
+			} </tbody></table></div>);
             }
             }
 
             const PersonRow = (props) => {
                 return (
                 <tr>
-                <td>
-                { props.data.id }
-                </td>
-                <td>
-                { props.data.name }
-                </td>
+					<td>
+					{ props.data.name }
+					</td>
+					<td>
+					{ props.data.lastname }
+					</td>
+					<td>
+					{ props.data.email }
+					</td>
                 </tr>
                 );
             }

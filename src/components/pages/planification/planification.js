@@ -9,9 +9,9 @@ import Tasklist from './tasklist';
 class Planification extends Component {
     render() {
     	return (
-    		<div className="Planification" class="container row card">
+    		<div className="Planification">
 				<br></br>
-    			<h4> Planification </h4>
+    			<h5> Planification </h5>
     			<br></br>
     			<Addtask></Addtask>
 				<Addphase/>
