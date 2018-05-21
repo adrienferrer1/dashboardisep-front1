@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Memberlist from './memberlist';
+
+
 
 class Groupcreation extends React.Component {
     render() {
@@ -19,32 +22,7 @@ class Groupcreation extends React.Component {
 				<br></br>
 				<div class="row">
 					<h5>Liste des membres du groupe</h5>
-					<table class="table">
-					  <thead>
-					    <tr>
-					      <th scope="col">Nom</th>
-					      <th scope="col">Prénom</th>
-					      <th scope="col">Mail</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <th>Nom 1</th>
-					      <td>Prénom 1</td>
-					      <td>pnom@isep.fr</td>
-					    </tr>
-					    <tr>
-					      <th>Nom 2</th>
-					      <td>Prénom 2</td>
-					      <td>pnom@isep.fr</td>
-					    </tr>
-					    <tr>
-					      <th>Nom 2</th>
-					      <td>Prénom 2</td>
-					      <td>pnom@isep.fr</td>
-					    </tr>
-					  </tbody>
-					</table>
+					<Memberlist/>
 				</div>
 			</div>
 );}
