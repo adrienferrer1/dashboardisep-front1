@@ -1,47 +1,73 @@
 import React, { Component } from 'react';
 
 
-const obj = [{
-    name: "onion",
-    price: ".99",
-    id: 1
-}, {
-    name: "pepper",
-    price: "1.25",
-    id: 2
-}, {
-    name: "broccoli",
-    price: "3.00",
-    id: 3
-}];
-
-class TableRow extends React.Component {
-    render() {
-        const {data} = this.props;
-        const row = data.map((data) =>
-            <tr>
-                <td key={data.name}>{data.name}</td>
-                <td key={data.id}>{data.id}</td>
-                <td key={data.price}>{data.price}</td>
-            </tr>
-        );
-        return (
-            <span>{row}</span>
-        );
-    }
-}
-
 class Done_tasks extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
+        this.state = {
+            data: [{
+                title : "Rédiger le CdC",
+                theoricalEndDate : "12/05/18",
+                endDate: "Aymeric",
+                duration : "10"
+            },{
+                title : "Rédiger le CdC",
+                theoricalEndDate : "12/05/18",
+                endDate: "Aymeric",
+                duration : "10"
+            }, {
+                title : "Rédiger le CdC",
+                theoricalEndDate : "12/05/18",
+                endDate: "Aymeric",
+                duration : "10"
+            },]
+        }
     }
     render() {
+        let rows = this.state.data.map(person => {
+            return <TaskRow key = {
+                person.name
+            } data = {person}
+            />
+        })
         return (
-            <table>
-                <TableRow data={this.props.data} />
-            </table>
-        );
+            <div className="col-6">
+                <br></br>
+                <h5>Tâches effectuées</h5>
+                <table className="table">
+
+                    <thead>
+                    <tr>
+                        <th>Intitulé</th>
+                        <th>Date de fin théorique</th>
+                        <th>Date de fin</th>
+                        <th>Durée</th>
+                    </tr>
+                    </thead>
+                    < tbody > {
+                        rows
+                    } </tbody></table></div>);
     }
 }
+
+const TaskRow = (props) => {
+    return (
+        <tr>
+            <td>
+                { props.data.title }
+            </td>
+            <td>
+                { props.data.theoricalEndDate }
+            </td>
+            <td>
+                { props.data.endDate }
+            </td>
+            <td>
+                { props.data.duration }
+            </td>
+        </tr>
+    );
+}
+
 
 export default Done_tasks;

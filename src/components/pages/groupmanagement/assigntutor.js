@@ -4,7 +4,6 @@ import Tutorsearch from "./tutorsearch";
 import { render } from 'react-dom';
 import { Chart } from 'react-google-charts';
 
-import {Sparklines, SparklinesBars} from 'react-sparklines';
 
 
 class Assigntutor extends React.Component {
@@ -69,9 +68,6 @@ class Assigntutor extends React.Component {
 						</div>
 						<button className="col-2 btn btn-primary"> Valider </button>
 					</div>
-                    <Sparklines data={[5, 10, 5, 20, 8, 15]}>
-                        <SparklinesBars />
-                    </Sparklines>
 
                     <div className={'my-pretty-chart-container'}>
                         <Chart
@@ -82,8 +78,6 @@ class Assigntutor extends React.Component {
                                chartPackages={['gantt']}
                                width="100%" height="9999px">
                            </Chart>
-
-                  }
                 </div>
 
 
