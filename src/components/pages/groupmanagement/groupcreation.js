@@ -8,20 +8,21 @@ class Groupcreation extends React.Component {
 
         this.handlegroupNameChange = this.handlegroupNameChange.bind(this);
         this.handlestudentSearchChange = this.handlestudentSearchChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handlesearchSubmit = this.handlesearchSubmit.bind(this);
+        this.handlegroupSubmit = this.handlegroupSubmit.bind(this);
     }
     handlegroupNameChange(event) {
         this.setState({groupname: event.target.value});
     }
     handlestudentSearchChange(event) {
-        this.setState({studentserch: event.target.value});
+        this.setState({studentsearch: event.target.value});
     }
     handlegroupSubmit(event) {
-        alert('A name was submitted: ' + this.state.lastname + this.state.name + this.state.mail);
+        alert(this.state.groupname);
         event.preventDefault();
     }
     handlesearchSubmit(event) {
-        alert('A name was submitted: ' + this.state.lastname + this.state.name + this.state.mail);
+        alert(this.state.studentsearch);
         event.preventDefault();
     }
 
@@ -33,12 +34,12 @@ class Groupcreation extends React.Component {
 				<br></br>
 					<div class="row">
 						<input type="text" class="form-control col-10" value={this.state.groupname} onChange={this.handlegroupNameChange} placeholder="Nom du groupe"/>
-						<button class="btn btn-primary col-2" onSubmit={this.handlegroupSubmit}> Créer </button>
+						<button class="btn btn-primary col-2" onClick={this.handlegroupSubmit}> Créer </button>
 					</div>
 					<br></br>
 					<div class="row">
-						<input type="text" class="form-control col-10" placeholder="Rechercher un élève"/>
-						<button class="btn btn-primary col-2" onSubmit={this.handlegroupSubmit}> Rechercher </button>
+						<input type="text" class="form-control col-10" value={this.state.studentsearch} onChange={this.handlestudentSearchChange}placeholder="Rechercher un élève"/>
+						<button class="btn btn-primary col-2" onClick={this.handlesearchSubmit}> Rechercher </button>
 					</div>
 				<br></br>
 				<div class="row">
