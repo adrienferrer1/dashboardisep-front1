@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Tutorsearch from "./tutorsearch";
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+
+import {Sparklines, SparklinesBars} from 'react-sparklines';
+
 
 class Assigntutor extends React.Component {
     render() {
@@ -15,20 +17,10 @@ class Assigntutor extends React.Component {
 						</div>
 						<button className="col-2 btn btn-primary"> Valider </button>
 					</div>
+                    <Sparklines data={[5, 10, 5, 20, 8, 15]}>
+                        <SparklinesBars />
+                    </Sparklines>
 
-          <XYPlot
-  width={300}
-  height={300}>
-  <HorizontalGridLines />
-  <LineSeries
-    data={[
-      {x: 1, y: 10},
-      {x: 2, y: 5},
-      {x: 3, y: 15}
-    ]}/>
-  <XAxis />
-  <YAxis />
-</XYPlot>
 				</div>
 
         	);
