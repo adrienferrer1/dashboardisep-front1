@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backlog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/planification/addphase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/addphase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,29 +30,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addtask.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="360">
+              <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addphase.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addphase.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addphase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addtutor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="35" column="124" lean-forward="true" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="124" />
+            <state relative-caret-position="277">
+              <caret line="54" column="69" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -83,13 +77,11 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupmanagement.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorsmanagement.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/menu.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/login.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/navbar.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
@@ -98,6 +90,8 @@
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addphase.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" />
+        <option value="$PROJECT_DIR$/src/components/login.js" />
       </list>
     </option>
   </component>
@@ -117,7 +111,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1890" />
@@ -152,22 +146,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboardisep-front1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboardisep-front1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="groupmanagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboardisep-front1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboardisep-front1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="planification" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,12 +192,12 @@
       <workItem from="1525804916381" duration="1958000" />
       <workItem from="1525952144845" duration="6269000" />
       <workItem from="1525978930302" duration="7410000" />
-      <workItem from="1526978897112" duration="8345000" />
+      <workItem from="1526978897112" duration="10152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30107000" />
+    <option name="totallyTimeSpent" value="31914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -461,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/taskattribution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -479,16 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,10 +542,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/taskattribution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addphase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+        <state relative-caret-position="277">
+          <caret line="54" column="69" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -22,8 +22,6 @@ class Addphase extends Component {
     handleCommentChange(event) {
         this.setState({comment: event.target.value});
     }
-
-
     handleSubmit(event) {
         alert(this.state.title  + this.state.startdate + this.state.enddate + this.state.comment );
         event.preventDefault();
