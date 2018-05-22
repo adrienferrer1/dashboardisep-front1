@@ -4,7 +4,6 @@ class Addtask extends Component {
     constructor(props) {
         super(props);
         this.state = {title: '', priority:'', enddate: '', phase:'',comment:''};
-
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handlePriorityChange = this.handlePriorityChange.bind(this);
         this.handleEnddateChange = this.handleEnddateChange.bind(this);

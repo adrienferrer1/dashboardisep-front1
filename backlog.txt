@@ -4,11 +4,12 @@ d'un bouton "submit", qui recup les données des champ, qui les mets dans un JSO
  qui crée une "requête" (a def avec le back) ;
 - Commencer a set-up un modèle de graphs (importer lib .js, + la faire fonctionner avec
 du JSON d'exemple en entrée ;     https://www.fusioncharts.com/react-charts/#/demos/ex1
-- Gérer le remplissage des <table> avec du JSON ;
+
 - Connecter le login avec la back.
 
 
 TO ENHANCE :
+- <Table> : associer du vrai JSON (via fonction de parsing par ex) pour le moment ce ne sont que des arrays ;
 - Changer bootstrap.css pour mettre la bonne couleur des boutons ;
 - Remplacer le routeur par un component ad hoc ;
 - Remplacer les "input required" par des fonctions plus propres.
