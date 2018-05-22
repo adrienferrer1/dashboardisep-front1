@@ -33,6 +33,13 @@ class Addtask extends Component {
         event.preventDefault();
     }
 
+    getPhaseOption(){
+        //recup json server et traitement pour remplir le tableau a faire
+        //TO DO
+        this.state.options = ["phase 1", "Phase 2"]
+        return this.state.options;
+    }
+
     render() {
     	return (
     		<div className="Addtask" class="col-xl-12">
@@ -55,8 +62,7 @@ class Addtask extends Component {
 					  <div class="form-group col-xl-6">
 					  	<select class="custom-select" value={this.state.phase} onChange={this.handlePhaseChange} name="Phase" form="addtask">
 					  		<option value="" disabled selected>Sélectionner une phase</option>
-					  		<option>Phase 1</option>
-					  		<option>Phase 2</option>
+                {this.getPhaseOption().map(option => {return <option value={option} key={option} >{option}</option>})}
 					  	</select>
 					  </div>
 					  <div class="col-xl-6">
