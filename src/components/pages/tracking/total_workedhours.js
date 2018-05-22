@@ -2,27 +2,27 @@ import React, { Component } from 'react';
 
 import { Chart } from 'react-google-charts';
 
-class Workedhours extends Component {
+class Totalworkedhours extends Component {
     constructor(props) {
         super(props);
         this.state = {
 
             data:[["Eleve","Heures travaillées",{"role":"style"}],
-                ["Eleve 1",6,"color:#ffc107"],
-                ["Eleve 2",8,"darkblue"],
-                ["Eleve 3",3,"color:#ffc107"],
-                ["Eleve 4",3,"darkblue"],
-                ["Eleve 5",10,"color:#ffc107"],
-                ["Eleve 6",2,"darkblue"]]
+                ["Eleve 1",24,"darkblue"],
+                ["Eleve 2",18,"color:#ffc107"],
+                ["Eleve 3",31,"darkblue"],
+                ["Eleve 4",33,"color:#ffc107"],
+                ["Eleve 5",29,"darkblue"],
+                ["Eleve 6",21,"color:#ffc107"]]
         };
     }
     render(){
         return(
             <div className="col-5">
                 <br></br>
-            <h5>Heures travaillées semaine en cours (en h)</h5>
+                <h5>Heures travaillées au total (en h)</h5>
                 <Chart
-                    graph_id="BarChart"
+                    graph_id="BarChart2"
                     chartType = "BarChart"
                     data={this.state.data}
                     width="100%"
@@ -39,4 +39,4 @@ class Workedhours extends Component {
 
 }
 
-export default Workedhours;
+export default Totalworkedhours;
