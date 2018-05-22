@@ -3,17 +3,24 @@ import React, { Component } from 'react';
 class Addtutor extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {name: '', lastname:'', mail: ''};
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handlelastNameChange = this.handlelastNameChange.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleMailChange = this.handleMailChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handlelastNameChange(event) {
+        this.setState({lastname: event.target.value});
     }
-
+    handleNameChange(event) {
+        this.setState({name: event.target.value});
+    }
+    handleMailChange(event) {
+        this.setState({mail: event.target.value});
+    }
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        alert('A name was submitted: ' + this.state.lastname + this.state.name + this.state.mail);
         event.preventDefault();
     }
 
@@ -26,14 +33,15 @@ class Addtutor extends Component {
             <br></br>
             <form class="container" onSubmit={this.handleSubmit}>
                 <div class="form-group">
-                    <input type="text" class="form-control" value={this.state.value} onChange={this.handleChange}
-                           placeholder="Nom"/>
+                    <input type="text" class="form-control" value={this.state.lastname} onChange={this.handlelastNameChange}
+                           placeholder="Nom" required/>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="Prénom" placeholder="Prénom"/>
+                    <input type="text" class="form-control" value={this.state.name} onChange={this.handleNameChange}
+						   placeholder="Prénom" required/>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="mail" placeholder="e-mail"/>
+                    <input type="email" class="form-control" value={this.state.mail} onChange={this.handleMailChange} placeholder="e-mail" required/>
                 </div>
                 <button type="submit" class="btn btn-primary">Valider</button>
             </form>
