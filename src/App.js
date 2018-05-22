@@ -8,6 +8,7 @@ import Groupmanagement from "./components/pages/groupmanagement/groupmanagement"
 import Tutorsmanagement from "./components/pages/tutorsmanagement/tutorsmanagement";
 import Planification from "./components/pages/planification/planification";
 import Tracking from "./components/pages/tracking/tracking";
+import Studenttracking from "./components/pages/student_tracking/studenttracking";
 import Login from "./components/login";
 import ReactDOM from "react-dom";
 
@@ -41,6 +42,7 @@ function App_logged(foo) {
                         <Route path="/Planification" component={Planification}/>
                         <Route path="/Login" component={Login}/>
                         <Route path="/Tracking" component={Tracking}/>
+                        <Route path="/Studenttracking" component={Studenttracking}/>
                     </div>
                 </Router>
             </div>

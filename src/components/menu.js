@@ -13,7 +13,7 @@ class Menu extends React.Component {
 	      			<a class="list-group-item list-group-item-action" href="/Planification" role="tab">Planification</a>
 	      			<a class="list-group-item list-group-item-action" href="/Tracking" role="tab">Suivi</a>
 	      			<a class="list-group-item list-group-item-action" href="#" role="tab">Reporting</a>
-	      			<a class="list-group-item list-group-item-action" href="#" role="tab">Suivi Elève</a>
+	      			<a class="list-group-item list-group-item-action" href="/Studenttracking" role="tab">Suivi Elève</a>
 	    		</div>
  			 </div>
 			)
