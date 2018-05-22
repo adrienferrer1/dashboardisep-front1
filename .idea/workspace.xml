@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,7 +19,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="405">
               <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -31,53 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assigntutor.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
+      <file leaf-file-name="addtask.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            <state relative-caret-position="240">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+      <file leaf-file-name="addtutor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tutorslist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tutorsmanagement.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorsmanagement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="41" selection-start-column="41" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groupcreation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="35" column="124" lean-forward="true" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="124" />
             </state>
           </provider>
         </entry>
@@ -107,7 +71,6 @@
       <list>
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addphase.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupmanagement.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" />
@@ -123,6 +86,7 @@
         <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
       </list>
     </option>
   </component>
@@ -192,6 +156,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="planification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dashboardisep-front1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboardisep-front1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="tutorsmanagement" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -239,12 +211,12 @@
       <workItem from="1525804916381" duration="1958000" />
       <workItem from="1525952144845" duration="6269000" />
       <workItem from="1525978930302" duration="7410000" />
-      <workItem from="1526978897112" duration="6744000" />
+      <workItem from="1526978897112" duration="7843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28506000" />
+    <option name="totallyTimeSpent" value="29605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -479,13 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupmanagement.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -555,20 +520,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="35" column="124" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="124" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -586,9 +551,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="124" lean-forward="true" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="405">
           <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -596,20 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
         </state>
       </provider>
     </entry>
