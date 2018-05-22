@@ -75,8 +75,7 @@ class Assigntutor extends React.Component {
                                chartType = "Gantt"
                                columns={this.state.columns}
                                rows={this.state.rows}
-                               chartPackages={['gantt']}
-                               width="100%" height="9999px">
+                               width="100%" height="300px">
                            </Chart>
                 </div>
 

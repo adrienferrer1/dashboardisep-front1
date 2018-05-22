@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assigntutor.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="assigntutor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="1080">
+              <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -57,14 +55,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workedhours.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="workedhours.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/workedhours.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="405">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="done_tasks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -127,10 +134,10 @@
         <option value="$PROJECT_DIR$/src/components/pages/planification/addphase.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" />
         <option value="$PROJECT_DIR$/src/components/login.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" />
       </list>
     </option>
   </component>
@@ -239,12 +246,12 @@
       <workItem from="1525804916381" duration="1958000" />
       <workItem from="1525952144845" duration="6269000" />
       <workItem from="1525978930302" duration="7410000" />
-      <workItem from="1526978897112" duration="11869000" />
+      <workItem from="1526978897112" duration="15793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33631000" />
+    <option name="totallyTimeSpent" value="37555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -298,7 +305,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -609,17 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="n#Done_tasks#0" />
-            <element signature="e#1488#1831#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/planification/taskattribution.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -637,6 +633,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/memberactivity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -644,20 +649,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/workedhours.js">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="135">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/workedhours.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="405">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
