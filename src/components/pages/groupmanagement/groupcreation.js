@@ -28,7 +28,7 @@ class Groupcreation extends React.Component {
 
     render() {
         return (
-			<div class="col-xl-6">
+			<div class="col-xl-6 col-lg-6">
 				<br></br>
 				<h5>Création d'un groupe</h5>
 				<br></br>

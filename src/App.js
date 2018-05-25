@@ -21,7 +21,7 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div className="App" className="row">
+            <div className="App">
                 <App_logged isLogged={this.state.isLogged}/>
             </div>
         );
@@ -36,7 +36,7 @@ function App_logged(foo) {
                 <Navbar></Navbar>
                 <Menu></Menu>
                 <Router>
-                    <div className="col-xl-10">
+                    <div className="col-xl-10 col-lg-9 col-md-8 col-sm-6">
                         <Route path="/groupmanagement" component={Groupmanagement}/>
                         <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
                         <Route path="/Planification" component={Planification}/>

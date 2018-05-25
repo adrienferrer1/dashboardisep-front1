@@ -31,21 +31,21 @@ class Tutorslist extends Component {
             />
         })
         return (
-        	<div className="col-5">
+        	<div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
                 <br></br>
 				<h5>Liste des tuteurs</h5>
-        	<table className="col-xl-4 table">
+                <table className="table">
 
-			<thead>
-				<tr>
-					<th>Nom</th>
-					<th>Prénom</th>
-					<th>E-mail</th>
-				</tr>
-			</thead>
-            < tbody > {
-                rows
-			} </tbody></table></div>);
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                < tbody > {
+                    rows
+                } </tbody></table></div>);
             }
             }
 

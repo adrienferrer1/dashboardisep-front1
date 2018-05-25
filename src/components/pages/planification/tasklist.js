@@ -33,7 +33,7 @@ class Tasklist extends Component {
         return (
             <div className="col-12">
                 <br></br>
-                <h5>Liste des tuteurs</h5>
+                <h5>Liste des tâches</h5>
                 <table className="col-xl-12 table">
 
                     <thead>

@@ -27,7 +27,7 @@ class Addtutor extends Component {
 
 
     render() {
-        return <div className="Addtutor" class="col-xl-5">
+        return <div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
             <br></br>
             <h5 class="container"> Ajouter un tuteur</h5>
             <br></br>

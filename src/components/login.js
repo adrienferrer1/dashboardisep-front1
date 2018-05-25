@@ -40,7 +40,15 @@ class Login extends React.Component {
         this.setState({password2: event.target.value});
     }
     handleSubscribeSubmit(event) {
-        alert(this.state.login1  + this.state.password1 + this.state.password2);
+        if (this.state.password1 != this.state.password2){
+            alert('Les mots de passes entrés son différents');
+        }
+        else{
+            alert(this.state.login1  + this.state.password1 + this.state.password2);
+            //Suite de la requête
+        }
+
+
         event.preventDefault();
     }
 

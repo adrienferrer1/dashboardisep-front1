@@ -2,14 +2,18 @@
 - Gérer le contrôle des formulaires (ie, créer une fonction ui s'exec au clic
 d'un bouton "submit", qui recup les données des champ, qui les mets dans un JSON et
  qui crée une "requête" (a def avec le back) ;
-- Commencer a set-up un modèle de graphs (importer lib .js, + la faire fonctionner avec
-du JSON d'exemple en entrée ;     https://www.fusioncharts.com/react-charts/#/demos/ex1
-
 - Connecter le login avec la back.
-
+- Ajouter des fonctions "DidMount" pour effectuer une requête et remplir les tables lorsque
+le composant est affiché;
+- Créer une page Accueil (Bienvenue sur DashBoardISEP) ;
 
 TO ENHANCE :
 - <Table> : associer du vrai JSON (via fonction de parsing par ex) pour le moment ce ne sont que des arrays ;
-- Changer bootstrap.css pour mettre la bonne couleur des boutons ;
+- Changer bootstrap.css pour mettre la bonne couleur (les boutons bleus avec le bleu ISEP) des boutons ;
 - Remplacer le routeur par un component ad hoc ;
 - Remplacer les "input required" par des fonctions plus propres.
+
+
+DONE (25/05/18) :
+- ajout lib pour graph JS (tous fonctionnels) ;
+- Table remplies avec des arrays => à passer en JSON ;
