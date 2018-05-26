@@ -12,6 +12,8 @@ class Login extends React.Component {
         this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
 
         //Subscribe Form
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handlelastNameChange = this.handlelastNameChange.bind(this);
         this.handleLogin1Change = this.handleLogin1Change.bind(this);
         this.handlePassword1Change = this.handlePassword1Change.bind(this);
         this.handlePassword2Change = this.handlePassword2Change.bind(this);
