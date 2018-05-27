@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Menu from "./components/menu";
+import Welcome from "./components/pages/welcome/welcome";
 import Groupmanagement from "./components/pages/groupmanagement/groupmanagement";
 import Tutorsmanagement from "./components/pages/tutorsmanagement/tutorsmanagement";
 import Planification from "./components/pages/planification/planification";
@@ -37,6 +38,7 @@ function App_logged(foo) {
                 <Menu></Menu>
                 <Router>
                     <div className="col-xl-10 col-lg-9 col-md-8 col-sm-6">
+                        <Route path="/welcome" component={Welcome}/>
                         <Route path="/groupmanagement" component={Groupmanagement}/>
                         <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
                         <Route path="/Planification" component={Planification}/>

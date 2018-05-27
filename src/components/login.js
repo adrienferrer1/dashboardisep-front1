@@ -29,7 +29,11 @@ class Login extends React.Component {
         this.setState({password: event.target.value});
     }
     handleLoginSubmit(event) {
-        alert(this.state.login  + this.state.password);
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.login, password: this.state.password}).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
         event.preventDefault();
     }
     //Subscribe Form Handle functions
@@ -69,9 +73,9 @@ class Login extends React.Component {
         return (
             <div>
                 <form class="row">
-                    <div class="col-6">
+                    <div class="col-xl-5 col-lg-4 col-md-4 col-sm-6 col-12">
                         <h4> Identification</h4>
-                        <input type="text" value={this.state.login} onChange={this.handleLoginChange} class="form-control" placeholder="Identifiant" name="login"/>
+                        <input type="text" value={this.state.login} onChange={this.handleLoginChange} class="form-control" placeholder="E-mail" name="login"/>
                         <br></br>
                         <input type="password" value={this.state.password} onChange={this.handlePasswordChange} class="form-control" placeholder="Mot de passe" name="password"/>
                         <br></br>
@@ -82,13 +86,13 @@ class Login extends React.Component {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <div className="col-6">
+                    <div className="col-xl-5 col-lg-4 col-md-4 col-sm-6 col-12">
                         <h4> Inscription</h4>
                         <input type="text" value={this.state.name} onChange={this.handleNameChange} className="form-control" placeholder="Prénom" name="name"/>
                         <br></br>
                         <input type="text" value={this.state.lastname} onChange={this.handlelastNameChange} className="form-control" placeholder="Nom" name="lastname"/>
                         <br></br>
-                        <input type="text" value={this.state.mail} onChange={this.handleMailChange} className="form-control" placeholder="Mail" name="mail"/>
+                        <input type="text" value={this.state.mail} onChange={this.handleMailChange} className="form-control" placeholder="E-mail" name="mail"/>
                         <br></br>
                         <input type="password" value={this.state.password1} onChange={this.handlePassword1Change} className="form-control" placeholder="Mot de passe" name="password1"/>
                         <br></br>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Memberlist from './memberlist';
+import axios from 'axios';
 
 class Groupcreation extends React.Component {
     constructor(props) {
@@ -19,6 +20,13 @@ class Groupcreation extends React.Component {
     }
     handlegroupSubmit(event) {
         alert(this.state.groupname);
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/groups/add',{name: this.state.groupname}).then(function (response) {
+            console.log(response);
+            alert('Votre groupe a bien été créé');
+        }).catch(function (error) {
+            alert('Un erreur est survenue : '+error);
+            console.log(error);
+        });
         event.preventDefault();
     }
     handlesearchSubmit(event) {

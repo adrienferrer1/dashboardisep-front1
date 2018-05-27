@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Addtask extends Component {
     constructor(props) {
@@ -29,7 +30,13 @@ class Addtask extends Component {
 
 
     handleSubmit(event) {
-        alert(this.state.title  + this.state.priority + this.state.enddate + this.state.phase + this.state.comment );
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add',{name: this.state.name, description: this.state.description, start_date: this.state.start_date, end_date: this.state.end_date}).then(function (response) {
+            console.log(response);
+            alert('Votre tâche a bien été ajoutée');
+        }).catch(function (error) {
+            console.log(error);
+            alert('Une erreur est survenue : '+error);
+        });
         event.preventDefault();
     }
 
