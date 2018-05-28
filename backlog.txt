@@ -1,11 +1,17 @@
-ï»¿TO-DO :
-- GÃ©rer le contrÃ´le des formulaires (ie, crÃ©er une fonction ui s'exec au clic
-d'un bouton "submit", qui recup les donnÃ©es des champ, qui les mets dans un JSON et
- qui crÃ©e une "requÃªte" (a def avec le back) ;
-- Connecter le login avec la back.
-- Ajouter des fonctions "DidMount" pour effectuer une requÃªte et remplir les tables lorsque
-le composant est affichÃ©;
-- CrÃ©er une page Accueil (Bienvenue sur DashBoardISEP) ;
+TO-DO :
+- Connecter tous les forms au back ;
+- Connecter le login avec la back + token
+- Ajouter des fonctions "DidMount" pour effectuer une requête et remplir les tables lorsque
+le composant est affiché;
+- Créer une page Accueil (Bienvenue sur DashBoardISEP) ;
+- Préparer la soutenance :
+	Idées :
+		- parler de Git ;
+		- structure du code & composants (identique à la structure du site) ;
+		- Fichier backlog ;
+		- Connexion back/front (fichier recap.docx) ;
+		- Lib Postman
+		
 
 - Envoyer les dates en timestamp + faire attention Ã  les envoyer en s et pas en ms
 
@@ -18,4 +24,4 @@ TO ENHANCE :
 
 DONE (25/05/18) :
 - ajout lib pour graph JS (tous fonctionnels) ;
-- Table remplies avec des arrays => Ã  passer en JSON ;
+- Table remplies avec des arrays => à passer en JSON ;

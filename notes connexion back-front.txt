@@ -1,0 +1,8 @@
+Requetes manquantes :
+ - ajouter un tuteur (via rôle super-admin, voir page "Gestion tuteurs") ;
+ - recup la liste des tuteurs
+
+Requetes qui marchent pas :
+- create group => error 403 ;
+- get students of a group : comment passer du nom à l'id ? ;
+- Tâche : manque priorité, date de fin théorique

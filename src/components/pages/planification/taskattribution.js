@@ -42,7 +42,7 @@ class Taskattribution extends Component {
                     <div class ="row">
                         <div class="form-group col-xl-6">
                             <select class="custom-select" value={this.state.phase} onChange={this.handlePhaseChange} name="choosetask">
-                                <option value="" disabled selected>Sélectionner une phase</option>
+                                <option value="" disabled selected>Sélectionner une tâche</option>
                                 {this.getPhaseOption().map(option => {return <option value={option} key={option} >{option}</option>})}
                             </select>
                         </div>

@@ -13,13 +13,12 @@ class Assigntutor extends React.Component {
      this.state = {
 
        rows: [
-    ['Research','Find sources',new Date(2015,1,1,8,0,0), new Date(2015,1,5,8,0,0),null,100,null],
-    ['Write','Write paper',null,new Date(2015,1,9,12,0,0),259200000,25,'Research,Outline'],
-    ['Cite','Create bibliography',null,new Date(2015,1,7,8,0,0),86400000,20,'Research'],
-    ['Complete','Hand in paper',null,new Date(2015,1,10,8,0,0),86400000,0,'Cite,Write'],
-    ['Outline','Outline paper',null,new Date(2015,1,6,8,0,0),86400000,100,'Research'],
-],
-
+                ['Research','Find sources',new Date(2015,1,1,8,0,0), new Date(2015,1,5,8,0,0),null,100,null],
+                ['Write','Write paper',null,new Date(2015,1,9,12,0,0),259200000,25,'Research,Outline'],
+                ['Cite','Create bibliography',null,new Date(2015,1,7,8,0,0),86400000,20,'Research'],
+                ['Complete','Hand in paper',null,new Date(2015,1,10,8,0,0),86400000,0,'Cite,Write'],
+                ['Outline','Outline paper',null,new Date(2015,1,6,8,0,0),86400000,100,'Research'],
+            ],
        columns: [
          {
            id:'Task ID',
