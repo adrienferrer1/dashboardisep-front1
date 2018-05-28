@@ -7,6 +7,8 @@ d'un bouton "submit", qui recup les données des champ, qui les mets dans un JSO
 le composant est affiché;
 - Créer une page Accueil (Bienvenue sur DashBoardISEP) ;
 
+- Envoyer les dates en timestamp + faire attention à les envoyer en s et pas en ms
+
 TO ENHANCE :
 - <Table> : associer du vrai JSON (via fonction de parsing par ex) pour le moment ce ne sont que des arrays ;
 - Changer bootstrap.css pour mettre la bonne couleur (les boutons bleus avec le bleu ISEP) des boutons ;

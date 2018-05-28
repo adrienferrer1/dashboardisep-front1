@@ -4,12 +4,12 @@ import browserhistory from 'react-router';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Redirect } from 'react-router-dom'
 
-class Login extends React.Component {
+class mail1 extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {login: '', password:'', mail:'', password1:'',password2:'', name:'', lastname:''};
-        //Login Form
-        this.handleLoginChange = this.handleLoginChange.bind(this);
+        this.state = {mail1: '', password:'', mail:'', password1:'',password2:'', name:'', lastname:''};
+        //mail1 Form
+        this.handlemail1Change = this.handlemail1Change.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
 
@@ -21,15 +21,20 @@ class Login extends React.Component {
         this.handlePassword2Change = this.handlePassword2Change.bind(this);
         this.handleSubscribeSubmit = this.handleSubscribeSubmit.bind(this);
     }
-    //Login Form Handle functions
-    handleLoginChange(event) {
-        this.setState({login: event.target.value});
+    //mail1 Form Handle functions
+    handlemail1Change(event) {
+        this.setState({mail1: event.target.value});
     }
     handlePasswordChange(event) {
         this.setState({password: event.target.value});
     }
     handleLoginSubmit(event) {
-        alert(this.state.login  + this.state.password);
+        alert(this.state.mail1  + this.state.password);
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.mail1, password: this.state.password}).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
         event.preventDefault();
     }
     //Subscribe Form Handle functions
@@ -60,8 +65,7 @@ class Login extends React.Component {
             }).catch(function (error) {
                 console.log(error);
             });
-            //alert(this.state.login1  + this.state.password1 + this.state.password2+ this.state.name+ this.state.lastname);
-            //Suite de la requête
+            //<Redirect to='/Tracking'/>
         }
         event.preventDefault();
     }
@@ -71,7 +75,7 @@ class Login extends React.Component {
                 <form class="row">
                     <div class="col-6">
                         <h4> Identification</h4>
-                        <input type="text" value={this.state.login} onChange={this.handleLoginChange} class="form-control" placeholder="Identifiant" name="login"/>
+                        <input type="text" value={this.state.mail1} onChange={this.handlemail1Change} class="form-control" placeholder="Identifiant" name="mail1"/>
                         <br></br>
                         <input type="password" value={this.state.password} onChange={this.handlePasswordChange} class="form-control" placeholder="Mot de passe" name="password"/>
                         <br></br>
@@ -103,5 +107,5 @@ class Login extends React.Component {
         );
     }
 }
-export default Login;
+export default mail1;
 
