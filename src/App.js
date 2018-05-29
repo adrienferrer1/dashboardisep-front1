@@ -31,7 +31,7 @@ class App extends React.Component {
 
 function App_logged(foo) {
     const isLogged = foo.isLogged;
-    if (isLogged != ''){
+    if (isLogged !== '' && isLogged !==null){
         return(
             <div className="App" className="row">
                 <Navbar></Navbar>

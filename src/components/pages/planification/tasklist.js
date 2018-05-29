@@ -78,16 +78,17 @@ class Tasklist extends Component {
                 <table className="col-xl-12 table">
 
                     <thead>
-                    <tr>
-                        <th>Intitulé</th>
-                        <th>Priorité /5</th>
-                        <th>Nom réalisateur</th>
-                        <th>Prénom réalisateur</th>
-                    </tr>
+                        <tr>
+                            <th>Intitulé</th>
+                            <th>Priorité /5</th>
+                            <th>Nom réalisateur</th>
+                            <th>Prénom réalisateur</th>
+                        </tr>
                     </thead>
                     < tbody > {
                         rows
-                    } </tbody></table>
+                    } </tbody>
+                </table>
 
                     <div className={'my-pretty-chart-container'}>
                         <Chart

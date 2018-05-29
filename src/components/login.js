@@ -34,7 +34,7 @@ class mail1 extends React.Component {
             sessionStorage.setItem('token', response.headers.authorization);
             window.location.replace("/Welcome");
         }).catch(function (error) {
-            alert("Votre de identifiant ou votre mot de passe est erroné");
+            alert("Votre identifiant ou votre mot de passe est erroné");
         });
         event.preventDefault();
     }
