@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import App from '../App';
+
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -7,14 +7,10 @@ class Navbar extends React.Component {
         //this.handleLoginClick = this.handleLoginClick.bind(this);
         //this.handleLogoutClick = this.handleLogoutClick.bind(this);
     }
-
-    handleLoginClick() {
-        App.IsLoggedIn.setState(false);
-        console.log('hello');
-    }
-
-    handleLogoutClick() {
-        this.setState({isLoggedIn: false});
+    handleLogoutClick(event) {
+        sessionStorage.setItem('token', '');
+        window.location.replace("/Login");
+        event.preventDefault();
     }
 
 
@@ -33,7 +29,7 @@ class Navbar extends React.Component {
 					</ul>
 					<ul className="nav navbar-nav navbar-right col-4">
 						<li><a className="btn btn-success log" href="/Login" onClick="this.handleLogInClick">S'identifier</a></li>
-						<li><a className="btn btn-danger log">Se déconnecter </a></li>
+						<li><a className="btn btn-danger log" onClick={this.handleLogoutClick}>Se déconnecter </a></li>
 					</ul>
 				</nav>
 			</div>

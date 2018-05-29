@@ -18,7 +18,7 @@ class App extends React.Component {
         super(props);
         //this.handleLoginClick = this.handleLoginClick.bind(this);
         //this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLogged: true}; // A REMPLACER PAR LE RENVOI DE L'API
+        this.state = {isLogged: sessionStorage.getItem('token')}; // A REMPLACER PAR LE RENVOI DE L'API
     }
     render() {
         return (
@@ -31,7 +31,7 @@ class App extends React.Component {
 
 function App_logged(foo) {
     const isLogged = foo.isLogged;
-    if (isLogged == true){
+    if (isLogged != ''){
         return(
             <div className="App" className="row">
                 <Navbar></Navbar>

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import browserhistory from 'react-router';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import { browserHistory } from 'react-router';
 
 class mail1 extends React.Component {
     constructor(props) {
@@ -29,14 +30,11 @@ class mail1 extends React.Component {
         this.setState({password: event.target.value});
     }
     handleLoginSubmit(event) {
-        //alert(this.state.mail1  + this.state.password);
         axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.mail1, password: this.state.password}).then(function (response) {
-            localStorage.setItem('token', response.headers.authorization);
-            //alert(localStorage.getItem('token'));
+            sessionStorage.setItem('token', response.headers.authorization);
             window.location.replace("/Groupmanagement");
         }).catch(function (error) {
             alert("Votre de identifiant ou votre mot de passe est erroné");
-            console.log(error);
         });
         event.preventDefault();
     }
@@ -58,9 +56,7 @@ class mail1 extends React.Component {
     }
     handleSubscribeSubmit(event) {
         if (this.state.password1 != this.state.password2){
-
             alert('Les mots de passes entrés sont différents');
-            //return <Redirect to='/Tracking'/>
         }
         else{
             axios.post('https://back-dashboardisep.projects.jcloud.fr/users/add',{name: this.state.name, lastname: this.state.lastname, email: this.state.mail, password: this.state.password1}).then(function (response) {
@@ -68,7 +64,6 @@ class mail1 extends React.Component {
             }).catch(function (error) {
                 console.log(error);
             });
-            //<Redirect to='/Tracking'/>
         }
         event.preventDefault();
     }
