@@ -29,10 +29,13 @@ class mail1 extends React.Component {
         this.setState({password: event.target.value});
     }
     handleLoginSubmit(event) {
-        alert(this.state.mail1  + this.state.password);
+        //alert(this.state.mail1  + this.state.password);
         axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.mail1, password: this.state.password}).then(function (response) {
-            console.log(response);
+            localStorage.setItem('token', response.headers.authorization);
+            //alert(localStorage.getItem('token'));
+            window.location.replace("/Groupmanagement");
         }).catch(function (error) {
+            alert("Votre de identifiant ou votre mot de passe est erroné");
             console.log(error);
         });
         event.preventDefault();
