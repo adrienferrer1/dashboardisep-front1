@@ -52,8 +52,11 @@ function App_logged(foo) {
     }
     else{
         return(
-            <div className="App" className="row">
-                <Login/>
+            <div className="App" className="container row">
+
+                <div className="col-xl-12 col-lg-10 col-md-8 col-sm-6">
+                    <Login/>
+                </div>
             </div>);
     }
 }
