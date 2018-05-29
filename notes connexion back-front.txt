@@ -4,6 +4,7 @@ Requetes manquantes :
 
 TO-DO :
 - Requetes update
+- Mail
 
 role 1 : tuteur 
 Role 0 : élève
