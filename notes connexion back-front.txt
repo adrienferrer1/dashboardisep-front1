@@ -1,18 +1,17 @@
 Requetes manquantes :
- - ajouter un tuteur (via rôle super-admin, voir page "Gestion tuteurs") ;
+ - ajouter un tuteur (via rÃ´le super-admin, voir page "Gestion tuteurs") ;
  - recup la liste des tuteurs
- - password verification
 
 TO-DO :
 - Requetes update
 
 role 1 : tuteur 
-Role 0 : élève
+Role 0 : Ã©lÃ¨ve
 role 2 : respo module
 role 3 : super admin
 
 
 Requetes qui marchent pas :
 - create group => error 403 ;
-- get students of a group : comment passer du nom à l'id ? ;
-- Tâche : manque priorité, date de fin théorique
+- get students of a group : comment passer du nom Ã  l'id ? ;
+- TÃ¢che : manque prioritÃ©, date de fin thÃ©orique
