@@ -76,8 +76,6 @@ class Addtask extends Component {
 					    <textarea class="form-control" value={this.state.comment} onChange={this.handleCommentChange} id="Commentaires" placeholder="Commentaires"/>
 					  </div>
 				  </div>
-
-
 				  <button type="submit" class="btn btn-primary" onClick={this.handleSubmit}>Valider</button>
 				</form>
 

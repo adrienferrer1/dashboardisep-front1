@@ -1,6 +1,16 @@
 Requetes manquantes :
  - ajouter un tuteur (via rôle super-admin, voir page "Gestion tuteurs") ;
  - recup la liste des tuteurs
+ - password verification
+
+TO-DO :
+- Requetes update
+
+role 1 : tuteur 
+Role 0 : élève
+role 2 : respo module
+role 3 : super admin
+
 
 Requetes qui marchent pas :
 - create group => error 403 ;

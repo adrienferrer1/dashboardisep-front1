@@ -4,7 +4,7 @@ import axios from 'axios';
 class Addtutor extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: '', lastname:'', mail: ''};
+        this.state = {name: '', lastname:'', mail: '', role: '1'};
 
         this.handlelastNameChange = this.handlelastNameChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
