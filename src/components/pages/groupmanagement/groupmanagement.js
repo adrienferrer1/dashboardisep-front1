@@ -7,8 +7,8 @@ class Groupmanagement extends Component {
     render() {
     	return (
     		<div className="Groupmanagement" class="row">
+                <Groupcreation/>
 	    		<Assigntutor/>
-	    		<Groupcreation/>
 	    	</div>
     		);
     }

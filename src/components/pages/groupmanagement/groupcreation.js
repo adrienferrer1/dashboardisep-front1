@@ -42,12 +42,12 @@ class Groupcreation extends React.Component {
 				<br></br>
 					<div class="row">
 						<input type="text" class="form-control col-10" value={this.state.groupname} onChange={this.handlegroupNameChange} placeholder="Nom du groupe"/>
-						<button class="btn btn-primary col-2" onClick={this.handlegroupSubmit}> Créer </button>
+						<button class="btn btn-primary" onClick={this.handlegroupSubmit}> Créer </button>
 					</div>
 					<br></br>
 					<div class="row">
 						<input type="text" class="form-control col-10" value={this.state.studentsearch} onChange={this.handlestudentSearchChange}placeholder="Rechercher un élève"/>
-						<button class="btn btn-primary col-2" onClick={this.handlesearchSubmit}> Rechercher </button>
+						<button class="btn btn-primary" onClick={this.handlesearchSubmit}> Rechercher </button>
 					</div>
 				<br></br>
 				<div class="row">

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Route, withRouter} from 'react-router-dom';
 import Tutor from './tutor';
+import axios from 'axios';
+
+
 
 class TutorSearch extends React.Component {
     constructor() {
@@ -11,29 +14,36 @@ class TutorSearch extends React.Component {
         };
     }
     componentDidMount() {
-        let initialTutors = [];
-        fetch('https://swapi.co/api/planets/')
-            .then(response => {
-                return response.json();
-            }).then(data => {
-            initialTutors = data.results.map((tutor) => {
-                return tutor
+        getTutors().then(
+            data => {
+                console.log(data);
+                this.setState({
+                    tutors: data,
+                });
             });
-            console.log(initialTutors);
-            this.setState({
-                tutors: initialTutors,
-            });
-        });
+        console.log(this.state.tutors);
     }
-
     render() {
         return (
             <Tutor state={this.state}/>
         );
     }
 }
-// after component is finished
+
+function getTutors(){
+    let Tutors=[];
+    axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+    return axios.get('https://back-dashboardisep.projects.jcloud.fr/users/all')
+        .then(function (response) {
+            for (var i = 0; i < response.data.length; i++){
+                if(response.data[i].role==0){
+                    Tutors.push(response.data[i]);
+                }
+            }
+            return Tutors;
+        });
+
+}
 
 export default TutorSearch;
 
-//ReactDOM.render(<TutorSearch />, document.getElementById('react-search'));

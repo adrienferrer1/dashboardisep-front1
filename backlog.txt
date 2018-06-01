@@ -1,4 +1,7 @@
 TO-DO :
+Dans "groupmanagement/tutorsearch" : remplacer le role==0 par role==1 (pour récupérer les tuteurs et pas les élèves)
+
+
 - Connecter tous les forms au back ;
 - Connecter le login avec la back + token
 - Ajouter des fonctions "DidMount" pour effectuer une requête et remplir les tables lorsque

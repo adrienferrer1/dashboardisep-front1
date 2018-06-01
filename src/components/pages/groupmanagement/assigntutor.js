@@ -7,10 +7,6 @@ import { render } from 'react-dom';
 
 class Assigntutor extends React.Component {
 
-
-
-
-
     render() {
         return (
         		<div class="col-5">
@@ -21,7 +17,7 @@ class Assigntutor extends React.Component {
 						<div className="col-6">
                             <Tutorsearch />
 						</div>
-						<button className="col-2 btn btn-primary"> Valider </button>
+
 					</div>
 
 
