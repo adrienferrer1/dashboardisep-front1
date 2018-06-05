@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Chart } from 'react-google-charts';
-
+import axios from 'axios';
 
 class Gantt extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
 
             rows: [
-                     ['Research','Find sources',new Date(2015,1,1,8,0,0), new Date(2015,1,5,8,0,0),null,100,null],
-                     ['Write','Write paper',null,new Date(2015,1,9,12,0,0),259200000,25,'Research,Outline'],
-                     ['Cite','Create bibliography',null,new Date(2015,1,7,8,0,0),86400000,20,'Research'],
-                     ['Complete','Hand in paper',null,new Date(2015,1,10,8,0,0),86400000,0,'Cite,Write'],
-                     ['Outline','Outline paper',null,new Date(2015,1,6,8,0,0),86400000,100,'Research'],
+
+              // ['Research','Find sources',new Date(2015,1,1,8,0,0), new Date(2015,1,5,8,0,0),null,100,null],
+              // ['Write','Write paper',null,new Date(2015,1,9,12,0,0),259200000,25,'Research,Outline'],
+              // ['Outline','Outline paper',null,new Date(2015,1,6,8,0,0),86400000,100,'Research'],
+
+
                  ],
             columns: [
               {
@@ -49,10 +50,33 @@ class Gantt extends Component {
         }
     }
 
+
+    getTaskListGantt(){
+      console.log("List creation:");
+        var phases = []
+        var rows = []
+          axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
+                phases = response.data.phases
+                phases.map(p => {
+                  rows.push([p.id.toString(),p.name,new Date(p.start_date*1000),new Date(p.end_date*1000),null,0,null])
+                  p.tasks.map(t => {
+                      rows.push([t.id.toString(),t.name,new Date(t.start_date*1000),new Date(t.end_date*1000),null,0,p.id.toString()])
+                  });
+                });
+                console.log(rows);
+              });
+              this.state.rows=rows;
+
+
+          }
+
+
+
     render() {
-      
+
         return (
             <div className="col-12">
+              {this.getTaskListGantt()}
 
                     <div className={'my-pretty-chart-container'}>
                         <Chart
