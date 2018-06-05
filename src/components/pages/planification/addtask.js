@@ -4,7 +4,7 @@ import axios from 'axios';
 class Addtask extends Component {
     constructor(props) {
         super(props);
-        this.state = {title: '', priority:'', enddate: '', phase:'',comment:''};
+        this.state = {title: '', priority:'', enddate: '', phase:'',comment:'', options:[]};
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handlePriorityChange = this.handlePriorityChange.bind(this);
         this.handleEnddateChange = this.handleEnddateChange.bind(this);
@@ -41,10 +41,12 @@ class Addtask extends Component {
     }
 
     getPhaseOption(){
-        //recup json server et traitement pour remplir le tableau a faire
-        //TO DO
-        this.state.options = ["phase 1", "Phase 2"]
-        return this.state.options;
+      var options = []
+      axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
+            options = response.data.phases.map(phase => {return phase.name})
+            this.setState({options})
+          })
+      return this.state.options;
     }
 
     render() {
