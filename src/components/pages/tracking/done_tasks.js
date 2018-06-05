@@ -16,12 +16,11 @@ class Done_tasks extends React.Component {
         axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
             .then(response => {
                 for (var i = 0; i < response.data.length; i++) {
-                    if (response.data[i].done==false) {
+                    if (response.data[i].done==true) {
                         done_tasks.push(response.data[i]);
                     }
                 }
                 this.setState({done_tasks});
-                console.log(this.state.done_tasks);
             });
     }
 

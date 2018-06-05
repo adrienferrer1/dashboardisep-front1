@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 
 class Tasks_left extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: [{
-                title : "Faire l'API",
-                add_date : "14/05/18",
-                priority: "3",
-                duration : "3h"
-            },{
-                title : "Préparer la soutenanace",
-                add_date : "18/05/18",
-                priority: "5",
-                duration : "4h"
-            }, {
-                title : "Rédiger le CdC",
-                add_date : "12/05/18",
-                priority: "2",
-                duration : "7h"
-            },]
+            tasks:[],
         }
     }
+    componentDidMount(){
+        let tasks = [];
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
+            .then(response => {
+                for (var i = 0; i < response.data.length; i++){
+                    if (response.data[i].done==false) {
+                        tasks.push(response.data[i]);
+                    }
+                }
+                this.setState({tasks});
+                console.log(this.state.tasks);
+            });
+    }
     render() {
-        let rows = this.state.data.map(person => {
+        let rows = this.state.tasks.map(person => {
             return <TaskRow key = {
                 person.name
             } data = {person}
@@ -38,9 +38,10 @@ class Tasks_left extends React.Component {
                     <thead>
                     <tr>
                         <th>Intitulé</th>
-                        <th>Date d'ajout</th>
-                        <th>Priorité /5</th>
-                        <th>Durée (en h)</th>
+                        <th>Description</th>
+                        <th>Date de début</th>
+                        <th>Date de fin</th>
+                        <th>Durée</th>
                     </tr>
                     </thead>
                     < tbody > {
@@ -53,19 +54,45 @@ const TaskRow = (props) => {
     return (
         <tr>
             <td>
-                { props.data.title }
+                { props.data.name }
             </td>
             <td>
-                { props.data.add_date }
+                { props.data.description }
             </td>
             <td>
-                { props.data.priority }
+                { timeConverter(props.data.start_date)}
             </td>
             <td>
-                { props.data.duration }
+                { timeConverter(props.data.end_date) }
+            </td>
+            <td>
+                { hourConverter(Duration(props.data.end_date,props.data.start_date)) }j
             </td>
         </tr>
     );
+}
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var time = date + ' ' + month + ' ' + year ;
+    return time;
+}
+
+function hourConverter(time) {
+    var hours;
+    hours = time / (3600*24);
+    return hours;
+}
+
+
+function Duration(date1,date2){
+    var time;
+    time = Math.abs(date2 - date1);
+    return time;
+
 }
 
 

@@ -12,6 +12,9 @@ class Addtask extends Component {
         this.handleCommentChange = this.handleCommentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+
+
     handleTitleChange(event) {
         this.setState({title: event.target.value});
     }
