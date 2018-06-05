@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Addtask extends Component {
+class Addtask extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {title: '', priority:'', enddate: '', phase:'',comment:'', options:[]};
+        this.state = {title: '', priority: '',startdate: '', enddate: '', phase:'',comment:'', options:[]};
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handlePriorityChange = this.handlePriorityChange.bind(this);
         this.handleEnddateChange = this.handleEnddateChange.bind(this);
+        this.handlestartdateChange = this.handlestartdateChange.bind(this);
         this.handlePhaseChange = this.handlePhaseChange.bind(this);
         this.handleCommentChange = this.handleCommentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,6 +22,9 @@ class Addtask extends Component {
     handleEnddateChange(event) {
         this.setState({enddate: event.target.value});
     }
+    handlestartdateChange(event) {
+        this.setState({startdate: event.target.value});
+    }
     handlePhaseChange(event) {
         this.setState({phase: event.target.value});
     }
@@ -28,25 +32,33 @@ class Addtask extends Component {
         this.setState({comment: event.target.value});
     }
 
-
+    componentDidMount(){
+      this.getPhaseOption();
+    }
     handleSubmit(event) {
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add',{name: this.state.name, description: this.state.description, start_date: this.state.start_date, end_date: this.state.end_date}).then(function (response) {
+       var data = {
+         name: this.state.title,
+         description: this.state.comment,
+         start_date: new Date (this.state.startdate).getTime(),
+         end_date: new Date (this.state.enddate).getTime()
+        }
+      var header = { headers: { Authorization: sessionStorage.getItem('token') }};
+      /*  axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add' + this.state.phase, data, header).then(function (response) {
             console.log(response);
             alert('Votre tâche a bien été ajoutée');
         }).catch(function (error) {
             console.log(error);
             alert('Une erreur est survenue : '+error);
-        });
+        });*/
         event.preventDefault();
     }
 
     getPhaseOption(){
-      var options = []
+      var options = [];
       axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
             options = response.data.phases.map(phase => {return phase.name})
             this.setState({options})
-          })
-      return this.state.options;
+          });
     }
 
     render() {
@@ -63,15 +75,19 @@ class Addtask extends Component {
 					    <input type="Number" value={this.state.priority} onChange={this.handlePriorityChange} class="form-control" id="Priorité" placeholder="Priorité"/>
 					  </div>
 					  <div class="form-group row">
-					    <p class="col-xl-7">date de fin théorique : </p>
-					    <input type="date" value={this.state.enddate} onChange={this.handleEnddateChange} class="col-xl-5 form-control" id="date de fin théorique" placeholder="Date de fin théorique"/>
+					    <p class="col-xl-7">date de début : </p>
+					    <input type="date" value={this.state.startdate} onChange={this.handlestartdateChange} class="col-xl-5 form-control" id="date de début" placeholder="Date de début"/>
 					  </div>
+            <div class="form-group row">
+              <p class="col-xl-7">date de fin théorique : </p>
+              <input type="date" value={this.state.enddate} onChange={this.handleEnddateChange} class="col-xl-5 form-control" id="date de fin théorique" placeholder="Date de fin théorique"/>
+            </div>
 				  </div>
 				  <div class ="row">
 					  <div class="form-group col-xl-6">
 					  	<select class="custom-select" value={this.state.phase} onChange={this.handlePhaseChange} name="Phase" form="addtask">
 					  		<option value="" disabled selected>Sélectionner une phase</option>
-                {this.getPhaseOption().map(option => {return <option value={option} key={option} >{option}</option>})}
+                {this.state.options.map(option => {return <option value={option} key={option} >{option}</option>})}
 					  	</select>
 					  </div>
 					  <div class="col-xl-6">
