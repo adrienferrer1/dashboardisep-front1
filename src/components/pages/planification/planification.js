@@ -4,6 +4,8 @@ import Addtask from './addtask';
 import Addphase from './addphase';
 import Taskattribution from './taskattribution';
 import Tasklist from './tasklist';
+import Gantt from './gantt';
+
 
 
 class Planification extends Component {
@@ -17,6 +19,7 @@ class Planification extends Component {
 				<Addphase/>
 				<Taskattribution/>
 				<Tasklist/>
+        <Gantt/>
 
 	    	</div>
     		);
@@ -24,4 +27,3 @@ class Planification extends Component {
 }
 
 export default Planification;
-
