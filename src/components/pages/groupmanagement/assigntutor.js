@@ -17,14 +17,8 @@ class Assigntutor extends React.Component {
 						<div className="col-6">
                             <Tutorsearch />
 						</div>
-
 					</div>
-
-
-
-
 				</div>
-
         	);
     }
 }

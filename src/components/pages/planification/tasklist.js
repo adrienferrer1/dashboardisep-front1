@@ -36,7 +36,6 @@ class Tasklist extends Component {
                 <br></br>
                 <h5>Liste des tâches</h5>
                 <table className="col-xl-12 table">
-
                     <thead>
                         <tr>
                             <th>Intitulé</th>
