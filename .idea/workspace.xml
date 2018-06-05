@@ -5,8 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +37,8 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="77" column="74" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="74" />
+            <state relative-caret-position="60">
+              <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -44,19 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="assigntutor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="285">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -65,29 +58,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutorsearch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groupcreation.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="memberlist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+            <state relative-caret-position="105">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutorsearch.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groupcreation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-534">
+              <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#764#1324#0" />
+                <element signature="e#1347#2037#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,23 +151,23 @@
         <option value="$PROJECT_DIR$/src/components/pages/student_tracking/workedhours.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js" />
         <option value="$PROJECT_DIR$/src/components/navbar.js" />
         <option value="$PROJECT_DIR$/src/components/menu.js" />
         <option value="$PROJECT_DIR$/src/components/login.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/gantt_graph.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupmanagement.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" />
       </list>
     </option>
   </component>
@@ -175,8 +188,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="594" />
-    <option name="y" value="153" />
+    <option name="x" value="652" />
+    <option name="y" value="7" />
     <option name="width" value="1104" />
     <option name="height" value="621" />
   </component>
@@ -222,6 +235,14 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="groupmanagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dashboardisep-front1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboardisep-front1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorsmanagement" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,14 +304,16 @@
       <workItem from="1527967396814" duration="326000" />
       <workItem from="1528098943478" duration="6676000" />
       <workItem from="1528117492796" duration="602000" />
+      <workItem from="1528197559220" duration="7509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89630000" />
+    <option name="totallyTimeSpent" value="97139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20062451" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -315,21 +338,21 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20062451" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329806" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20062451" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +363,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -600,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -621,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="36" column="73" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -639,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
           <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -675,17 +677,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="77" column="74" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="74" />
+        <state relative-caret-position="60">
+          <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/addtutor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="233" selection-start-line="36" selection-start-column="233" selection-end-line="36" selection-end-column="233" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorslist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#764#1324#0" />
+            <element signature="e#1347#2037#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -695,29 +753,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/tutor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="284">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

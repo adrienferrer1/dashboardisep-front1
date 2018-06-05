@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import axios from "axios/index";
 
 class Tutorslist extends Component {
     constructor() {
         super();
         this.state = {
+            tutors:[],
             data: [{
                 name: "Aymeric",
                 lastname: "De Javel",
@@ -23,8 +25,24 @@ class Tutorslist extends Component {
             }]
         }
     }
+
+    componentDidMount(){
+        let tutors = [];
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/all')
+            .then(response => {
+                for (var i = 0; i < response.data.length; i++){
+                    if (response.data[i].role==1) {
+                        tutors.push(response.data[i]);
+                    }
+                }
+                this.setState({tutors});
+                console.log(tutors);
+            });
+    }
+
     render() {
-        let rows = this.state.data.map(person => {
+        let rows = this.state.tutors.map(person => {
             return <PersonRow key = {
                 person.name
             } data = {person}

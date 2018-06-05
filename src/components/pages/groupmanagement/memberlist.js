@@ -7,8 +7,12 @@ class Memberlist extends React.Component {
             students: []
         }
     }
+
+
+
+
     render() {
-        console.log(this.props.state.group_students);
+        //console.log(this.props.state.group_students);
         this.state.students=this.props.state.group_students;
         let rows = this.state.students.map(person => {
             return <PersonRow key = {
@@ -23,7 +27,7 @@ class Memberlist extends React.Component {
 
                     <thead>
                     <tr>
-                        <th>Elèves</th>
+                        <th className="col-xl-8 col-lg-8 col-md-10 sm-12 col-12">Elèves</th>
                     </tr>
                     </thead>
                     < tbody > {
@@ -38,7 +42,6 @@ const PersonRow = (props) => {
             <td>
                 { props.data }
             </td>
-
         </tr>
     );
 }

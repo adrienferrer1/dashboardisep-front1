@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Chart } from 'react-google-charts';
+import axios from 'axios';
 
 
 class Tasklist extends Component {
@@ -8,6 +9,8 @@ class Tasklist extends Component {
     constructor() {
         super();
         this.state = {
+            tasks: [],
+
             data: [{
                 title : "Rédiger le CdC",
                 priority: "4",
@@ -64,11 +67,24 @@ class Tasklist extends Component {
             ],
         }
     }
+    componentDidMount(){
+        let tasks = [];
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
+            .then(response => {
+                for (var i = 0; i < response.data.length; i++){
+                    tasks.push(response.data[i]);
+                }
+                this.setState({tasks});
+                console.log(tasks);
+                console.log(this.state.tasks);
+            });
+    }
     render() {
-        let rows = this.state.data.map(person => {
+        let rows = this.state.tasks.map(task => {
             return <TaskRow key = {
-                person.name
-            } data = {person}
+                task.name
+            } data = {task}
             />
         })
         return (
@@ -80,9 +96,10 @@ class Tasklist extends Component {
                     <thead>
                         <tr>
                             <th>Intitulé</th>
-                            <th>Priorité /5</th>
-                            <th>Nom réalisateur</th>
+                            <th>Date de début</th>
+                            <th>Date de fin </th>
                             <th>Prénom réalisateur</th>
+                            <th>Nom réalisateur</th>
                         </tr>
                     </thead>
                     < tbody > {
@@ -109,19 +126,32 @@ const TaskRow = (props) => {
     return (
         <tr>
             <td>
-                { props.data.title }
-            </td>
-            <td>
-                { props.data.priority }
-            </td>
-            <td>
                 { props.data.name }
             </td>
             <td>
-                { props.data.lastname }
+                { timeConverter(props.data.start_date) }
+            </td>
+            <td>
+                { timeConverter(props.data.end_date) }
+            </td>
+            <td>
+                { props.data.students[0].name }
+            </td>
+            <td>
+                { props.data.students[0].lastname }
             </td>
         </tr>
     );
+}
+
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var time = date + ' ' + month + ' ' + year ;
+    return time;
 }
 
 export default Tasklist;

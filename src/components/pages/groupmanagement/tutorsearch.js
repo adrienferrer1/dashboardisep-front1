@@ -36,7 +36,7 @@ function getTutors(){
     return axios.get('https://back-dashboardisep.projects.jcloud.fr/users/all')
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++){
-                if(response.data[i].role==0){
+                if(response.data[i].role==1){
                     Tutors.push(response.data[i]);
                 }
             }

@@ -15,7 +15,6 @@ class Groupcreation extends React.Component {
     componentDidMount() {
         getStudents().then(
             data => {
-                //console.log(data);
                 this.setState({
                     students: data,
                 });
@@ -28,33 +27,24 @@ class Groupcreation extends React.Component {
         this.setState({student: event.target.value});
     }
     handlegroupSubmit(event) {
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/groups/add',{name: this.state.groupname}).then(function (response) {
-            alert('Votre groupe a bien été créé');
-        }).catch(function (error) {
-            alert('Un erreur est survenue : '+error);
-            console.log(error);
-        });
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/groups/add',{name: this.state.groupname}).then(function (response) {
-            alert('Votre groupe a bien été créé');
-        }).catch(function (error) {
-            alert('Un erreur est survenue : '+error);
-            console.log(error);
-        });
-
-
-
         event.preventDefault();
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/groups/add',{name: this.state.groupname}).then(function (response) {
+            alert('Votre groupe a bien été créé');
+        }).catch(function (error) {
+            alert('Un erreur est survenue : '+error);
+            console.log(error);
+        });
     }
     handleAddSubmit(event) {
-        this.state.group_students.push(this.state.student);
-        alert("Utilisateur ajouté");
         event.preventDefault();
+        this.state.group_students.push(this.state.student);
+        this.forceUpdate();
     }
 
     render() {
         let students = this.state.students;
         let optionItems1 = students.map((student) =>
-            <option key={student.name}>
+            <option key={student.id}>
                 {student.name} {student.lastname}</option>
         );
         return (
@@ -68,7 +58,7 @@ class Groupcreation extends React.Component {
 					<br></br>
 					<div class="row">
                         <select value={this.state.student} onChange={this.handlestudentChange} className="form-control col-xl-10 lg-6">Choisir un élève
-                            <option disabled selected>Choisir un élève</option>
+                            <option value='' disabled selected>Choisir un élève</option>
                             {optionItems1}
                         </select>
 						<button class="btn btn-primary" onClick={this.handleAddSubmit}> Ajouter </button>

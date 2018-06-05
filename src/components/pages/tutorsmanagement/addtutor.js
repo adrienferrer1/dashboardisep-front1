@@ -4,11 +4,13 @@ import axios from 'axios';
 class Addtutor extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: '', lastname:'', mail: '', role: '1'};
+        this.state = {name: '', lastname:'', mail: '',password:'',password_repeat:'', role: 1};
 
         this.handlelastNameChange = this.handlelastNameChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleMailChange = this.handleMailChange.bind(this);
+        this.handlePWChange = this.handlePWChange.bind(this);
+        this.handlePW_RepChange = this.handlePW_RepChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handlelastNameChange(event) {
@@ -20,18 +22,27 @@ class Addtutor extends Component {
     handleMailChange(event) {
         this.setState({mail: event.target.value});
     }
-    handleSubmit(event) {
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.login, password: this.state.password, role: this.state.role}).then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-            console.log(error);
-        });
-        event.preventDefault();
-        alert('A name was submitted: ' + this.state.lastname + this.state.name + this.state.mail);
-        event.preventDefault();
+    handlePWChange(event) {
+        this.setState({password: event.target.value});
     }
+    handlePW_RepChange(event) {
+        this.setState({password_repeat: event.target.value});
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+        if (this.state.password != this.state.password_repeat){
+            alert('Les mots de passes entrés sont différents');
+        }
+        else{
+            axios.post('https://back-dashboardisep.projects.jcloud.fr/users/add',{name :this.state.name,lastname:this.state.lastname ,email: this.state.mail, password: this.state.password, passwordRepeat: this.state.password_repeat, role: this.state.role}).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
 
-
+            alert('Votre tuteur : '+this.state.lastname +' '+ this.state.name +' a bien été ajouté : ');
+        }
+    }
 
     render() {
         return <div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
@@ -50,7 +61,15 @@ class Addtutor extends Component {
                 <div class="form-group">
                     <input type="email" class="form-control" value={this.state.mail} onChange={this.handleMailChange} placeholder="e-mail" required/>
                 </div>
-                <button type="submit" class="btn btn-primary">Valider</button>
+                <div className="form-group">
+                    <input type="password" className="form-control" value={this.state.password}
+                           onChange={this.handlePWChange} placeholder="Mot de passe" required/>
+                </div>
+                <div className="form-group">
+                    <input type="password" className="form-control" value={this.state.password_repeat}
+                           onChange={this.handlePW_RepChange} placeholder="Répétez votre mot de passe" required/>
+                </div>
+                <button type="submit" class="btn btn-primary" onClick={this.handleSubmit}>Valider</button>
             </form>
 
         </div>;
