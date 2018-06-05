@@ -24,11 +24,10 @@ class Tutor extends React.Component {
 
         return (
          <div className="dropdown" id="tutor-search">
-             <select selected="selected" value={this.state.active_tutor} className="btn btn-light" onChange={this.handleSelectChange}>
+             <select selected="selected" value={this.state.active_tutor} className="form-control" onChange={this.handleSelectChange}>
                  <option value='' disabled selected>Choisir votre tuteur</option>
                 {optionItems}
              </select>
-             <button className="btn btn-primary" onClick={this.handleTutorSubmit}> Valider </button>
          </div>
         )
     }

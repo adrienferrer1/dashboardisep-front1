@@ -16,12 +16,12 @@ class TutorSearch extends React.Component {
     componentDidMount() {
         getTutors().then(
             data => {
-                console.log(data);
+                //console.log(data);
                 this.setState({
                     tutors: data,
                 });
             });
-        console.log(this.state.tutors);
+        //console.log(this.state.tutors);
     }
     render() {
         return (
@@ -42,7 +42,6 @@ function getTutors(){
             }
             return Tutors;
         });
-
 }
 
 export default TutorSearch;

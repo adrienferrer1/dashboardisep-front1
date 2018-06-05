@@ -4,42 +4,26 @@ class Memberlist extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: [{
-                name: "Aymeric",
-                lastname: "De Javel",
-                email : "adejavel@isep.fr"
-            }, {
-                name: "Alain",
-                lastname: "Rizkallah",
-                email : "arizkallah@isep.fr"
-            }, {
-                name: "François",
-                lastname: "De Verdun",
-                email : "adeverdun@isep.fr"
-            }, {
-                name: "Adrien",
-                lastname: "Ferrer",
-                email : "aferrer@isep.fr"
-            }]
+            students: []
         }
     }
     render() {
-        let rows = this.state.data.map(person => {
+        console.log(this.props.state.group_students);
+        this.state.students=this.props.state.group_students;
+        let rows = this.state.students.map(person => {
             return <PersonRow key = {
-                person.name
+                person
             } data = {person}
             />
         })
         return (
-            <div>
+            <div className="col-xl-12 col-lg-12 col-md-12 sm-12 col-12">
                 <br></br>
-                <table className="table">
+                <table className="table ">
 
                     <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>E-mail</th>
+                        <th>Elèves</th>
                     </tr>
                     </thead>
                     < tbody > {
@@ -52,14 +36,9 @@ const PersonRow = (props) => {
     return (
         <tr>
             <td>
-                { props.data.name }
+                { props.data }
             </td>
-            <td>
-                { props.data.lastname }
-            </td>
-            <td>
-                { props.data.email }
-            </td>
+
         </tr>
     );
 }
