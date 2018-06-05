@@ -38,12 +38,15 @@ class Taskattribution extends React.Component {
     }
 
     getElevesOption(){
-      var group = 11;
+      var header = { headers: { Authorization: sessionStorage.getItem('token') }};
       var optionEleves = [];
-      axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+group, { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
-        optionEleves = response.data.students.map(student => { return student.name})
-            this.setState({optionEleves})
-          })
+      axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me', header)
+        .then(response => {
+          axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+response.data.group.id, header ).then(response => {
+            optionEleves = response.data.students.map(student => { return student.name})
+                this.setState({optionEleves})
+              })
+        });
     }
 
     render() {
