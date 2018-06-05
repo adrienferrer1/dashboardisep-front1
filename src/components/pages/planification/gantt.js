@@ -60,7 +60,7 @@ class Gantt extends Component {
                 phases.map(p => {
                   rows.push([p.id.toString(),p.name,new Date(p.start_date*1000),new Date(p.end_date*1000),null,0,null])
                   p.tasks.map(t => {
-                      rows.push([t.id.toString(),t.name,new Date(t.start_date*1000),new Date(t.end_date*1000),null,0,p.id.toString()])
+                      rows.push([t.id.toString(),t.name,new Date(t.start_date*1000),new Date(t.end_date*1000),null,t.done? 100 : 0,p.id.toString()])
                   });
                 });
                 console.log(rows);
@@ -87,7 +87,7 @@ class Gantt extends Component {
                                width="100%" height="300px">
                            </Chart>
                 </div>
-
+                window.location.reload()
 
                     </div>);
     }
