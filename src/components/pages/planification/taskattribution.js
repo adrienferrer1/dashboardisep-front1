@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Taskattribution extends Component {
     constructor(props) {
         super(props);
-        this.state = {phase: '', student:'', optionsPhase:'', optionEleves:''};
+        this.state = {phase: '', student:'', optionsTask:[], optionEleves:[]};
         this.handlePhaseChange = this.handlePhaseChange.bind(this);
         this.handleStudentChange = this.handleStudentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,18 +20,31 @@ class Taskattribution extends Component {
         event.preventDefault();
     }
 
-    getPhaseOption(){
-        //recup json server et traitement pour remplir le tableau a faire
-        //TO DO
-        this.state.optionsPhase = ["phase 1", "Phase 2"]
-        return this.state.optionsPhase;
+    getTaskOption(){
+      var optionsTask = []
+      axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
+        response.data.phases.map(phase => {
+          phase.tasks.map(task => {
+            optionsTask.push(task.name)
+          })
+        })
+            this.setState({optionsTask})
+          })
+      return this.state.optionsTask;
     }
 
     getElevesOption(){
+      var group = 11;
+      var optionEleves = []
+      axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+group, { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
+        optionEleves = response.data.students.map(student => { return student.name})
+        console.log(optionEleves);
+            this.setState({optionEleves})
+          })
+      return this.state.optionEleves;
+
         //recup json server et traitement pour remplir le tableau a faire
         //TO DO
-        this.state.optionEleves = ["Elève A", "Elève B"]
-        return this.state.optionEleves;
     }
 
     render() {
@@ -43,7 +57,7 @@ class Taskattribution extends Component {
                         <div class="form-group col-xl-6">
                             <select class="custom-select" value={this.state.phase} onChange={this.handlePhaseChange} name="choosetask">
                                 <option value="" disabled selected>Sélectionner une tâche</option>
-                                {this.getPhaseOption().map(option => {return <option value={option} key={option} >{option}</option>})}
+                                {this.getTaskOption().map(option => {return <option value={option} key={option} >{option}</option>})}
                             </select>
                         </div>
                         <div class="form-group col-xl-6">
