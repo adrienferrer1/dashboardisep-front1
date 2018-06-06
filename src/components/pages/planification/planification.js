@@ -13,8 +13,9 @@ class Planification extends Component {
     	return (
     		<div className="Planification">
 				<br></br>
-    			<h5> Planification </h5>
-    			<br></br>
+				<div className="row">
+                    <h5> Planification </h5>
+				</div>
     			<Addtask></Addtask>
 				<Addphase/>
 				<Taskattribution/>

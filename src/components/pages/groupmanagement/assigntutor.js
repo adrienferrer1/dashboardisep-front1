@@ -9,15 +9,15 @@ class Assigntutor extends React.Component {
 
     render() {
         return (
-        		<div class="col-5">
-				<br></br>
-        		<h5>Affecter un tuteur</h5>
-        		<br></br>
-					<div className="row">
-						<div className="col-6">
-                            <Tutorsearch />
+        		<div className="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+					<br></br>
+					<h5>Affecter un tuteur</h5>
+					<br></br>
+						<div className="row">
+							<div>
+								<Tutorsearch />
+							</div>
 						</div>
-					</div>
 				</div>
         	);
     }

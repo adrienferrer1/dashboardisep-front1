@@ -45,7 +45,7 @@ class Addtutor extends Component {
     }
 
     render() {
-        return <div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
+        return <div className="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
             <br></br>
             <h5 class="container"> Ajouter un tuteur</h5>
             <br></br>
@@ -70,6 +70,8 @@ class Addtutor extends Component {
                            onChange={this.handlePW_RepChange} placeholder="Répétez votre mot de passe" required/>
                 </div>
                 <button type="submit" class="btn btn-primary" onClick={this.handleSubmit}>Valider</button>
+                <br/>
+                <p> </p>
             </form>
 
         </div>;

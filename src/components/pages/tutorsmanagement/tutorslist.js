@@ -6,23 +6,6 @@ class Tutorslist extends Component {
         super();
         this.state = {
             tutors:[],
-            data: [{
-                name: "Aymeric",
-                lastname: "De Javel",
-				email : "adejavel@isep.fr"
-            }, {
-                name: "Alain",
-                lastname: "Rizkallah",
-                email : "arizkallah@isep.fr"
-            }, {
-                name: "François",
-                lastname: "De Verdun",
-                email : "adeverdun@isep.fr"
-            }, {
-                name: "Adrien",
-                lastname: "Ferrer",
-                email : "aferrer@isep.fr"
-            }]
         }
     }
 
@@ -49,7 +32,7 @@ class Tutorslist extends Component {
             />
         })
         return (
-        	<div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
+        	<div className="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
                 <br></br>
 				<h5>Liste des tuteurs</h5>
                 <table className="table">

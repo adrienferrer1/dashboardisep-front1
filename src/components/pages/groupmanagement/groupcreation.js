@@ -48,31 +48,32 @@ class Groupcreation extends React.Component {
                 {student.name} {student.lastname}</option>
         );
         return (
-			<div class="col-xl-6 col-lg-6">
+			<div className="container col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
 				<br></br>
 				<h5>Création d'un groupe</h5>
 				<br></br>
-					<div class="row">
-						<input type="text" class="form-control col-xl-10 lg-6" value={this.state.groupname} onChange={this.handlegroupNameChange} placeholder="Nom du groupe"/>
+					<div className="row container">
+						<input type="text" className="form-control col-xl-12 lg-12 md-12 sm-12 12" value={this.state.groupname} onChange={this.handlegroupNameChange} placeholder="Nom du groupe"/>
 					</div>
 					<br></br>
-					<div class="row">
+					<div className="row container">
                         <select value={this.state.student} onChange={this.handlestudentChange} className="form-control col-xl-10 lg-6">Choisir un élève
                             <option value='' disabled selected>Choisir un élève</option>
                             {optionItems1}
                         </select>
-						<button class="btn btn-primary" onClick={this.handleAddSubmit}> Ajouter </button>
+						<button className="btn btn-primary" onClick={this.handleAddSubmit}> Ajouter </button>
 					</div>
-				<br></br>
-
-				<div class="row">
+				<br/>
+				<div className="row container">
 					<h5>Liste des membres du groupe</h5>
 					<Memberlist state={this.state}/>
 				</div>
                 <br/>
                 <br/>
-                <button className="btn btn-primary" onClick={this.handlegroupSubmit}> Valider la création du groupe</button>
-			</div>
+                <button className="btn btn-primary " onClick={this.handlegroupSubmit}> Valider la création du groupe</button>
+			    <br/>
+                <p></p>
+            </div>
 );}
 }
 
