@@ -71,7 +71,7 @@ class mail1 extends React.Component {
         return (
             <div>
                 <form class="row">
-                    <div class="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h4> Identification</h4>
                         <input type="text" value={this.state.mail1} onChange={this.handlemail1Change} class="form-control" placeholder="Identifiant" name="mail1"/>
                         <br></br>
@@ -84,7 +84,7 @@ class mail1 extends React.Component {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <div className="col-xl-5 col-lg-4 col-md-4 col-sm-3 col-12">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h4> Inscription</h4>
                         <input type="text" value={this.state.name} onChange={this.handleNameChange} className="form-control" placeholder="Prénom" name="name"/>
                         <br></br>
