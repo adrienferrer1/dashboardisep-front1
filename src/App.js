@@ -8,6 +8,7 @@ import Welcome from "./components/pages/welcome/welcome";
 import Groupmanagement from "./components/pages/groupmanagement/groupmanagement";
 import Tutorsmanagement from "./components/pages/tutorsmanagement/tutorsmanagement";
 import Planification from "./components/pages/planification/planification";
+import Modification from "./components/pages/modification/modification";
 import Tracking from "./components/pages/tracking/tracking";
 import Studenttracking from "./components/pages/student_tracking/studenttracking";
 import Login from "./components/login";
@@ -38,7 +39,7 @@ function App_logged(foo) {
                 <Navbar></Navbar>
                 <Menu></Menu>
                 <Router>
-                    <div className="col-xl-10 col-lg-9 col-md-8 col-sm-6">
+                    <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
                         <Route path="/welcome" component={Welcome}/>
                         <Route path="/groupmanagement" component={Groupmanagement}/>
                         <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
@@ -46,6 +47,7 @@ function App_logged(foo) {
                         <Route path="/Login" component={Login}/>
                         <Route path="/Tracking" component={Tracking}/>
                         <Route path="/Studenttracking" component={Studenttracking}/>
+                        <Route path="/Modification" component={Modification}/>
                     </div>
                 </Router>
             </div>
