@@ -5,12 +5,12 @@ class Welcome extends Component {
         return (
             <div className="welcome">
                 <br/>
-                <div className="col-xl-10 col-lg-8 col-md-8 col-sm-6 col-12">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div className="container">
                         <h5>Bienvenue sur DashBoard'ISEP</h5>
                     </div>
                 </div>
-                <div className="col-xl-10 col-lg-8 col-md-8 col-sm-6 col-12">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="card container">
                     <br/>
                         <p> </p>

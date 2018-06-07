@@ -9,7 +9,7 @@ class Tutorsmanagement extends Component {
     render() {
     	return (
     		<div className="Tutorsmanagement" className="container row">
-                <div className="col-xl-10 col-lg-8 col-md-8 col-sm-6 col-12">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <br/>
                     <p> </p>
                     <div className="card container">
