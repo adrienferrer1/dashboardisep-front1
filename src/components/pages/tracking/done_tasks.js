@@ -32,7 +32,7 @@ class Done_tasks extends React.Component {
             />
         })
         return (
-            <div className="col-5">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <br></br>
                 <h5>Tâches effectuées</h5>
                 <table className="table">

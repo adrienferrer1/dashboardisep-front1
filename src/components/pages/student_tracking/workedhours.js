@@ -15,7 +15,7 @@ class Workedhours extends Component {
     }
     render(){
         return(
-            <div className="col-5">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <br></br>
             <h5>Heures travaillées semaine en cours (en h)</h5>
                 <Chart

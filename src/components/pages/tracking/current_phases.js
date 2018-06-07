@@ -26,7 +26,7 @@ class Current_phases extends Component {
     }
     render(){
         return(
-            <div className="col-5">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <br></br>
                 <h5>Phases en cours</h5>
                 <Chart

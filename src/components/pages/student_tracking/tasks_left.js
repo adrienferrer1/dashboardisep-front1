@@ -34,7 +34,7 @@ class Tasks_left extends React.Component {
             />
         })
         return (
-            <div className="col-10">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <br></br>
                 <h5>Tâches Restantes</h5>
                 <table className="table">
