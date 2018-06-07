@@ -77,15 +77,15 @@ class Addtask extends React.Component {
 
     render() {
     	return (
-    		<div className="Addtask" class="col-xl-12">
+    		<div className="Addtask" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     		    <br></br>
     			<h5> Ajouter une tâche</h5>
 				<form id="addtask">
 				  <div className ="row">
-					  <div className="form-group col-xl-5">
+					  <div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 					    <input type="text" value={this.state.title} onChange={this.handleTitleChange} class="form-control" id="Intitulé" placeholder="Intitulé"/>
 					  </div>
-                      <div className="form-group col-xl-5">
+                      <div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                           <select className="custom-select" value={this.state.phase} onChange={this.handlePhaseChange}
                                   name="Phase" form="addtask">
                               <option value="" disabled selected>Sélectionner une phase</option>
@@ -96,14 +96,14 @@ class Addtask extends React.Component {
                       </div>
                   </div>
                   <div className="row">
-                      <div className="from-group mb-3 col-xl-5">
+                      <div className="from-group mb-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                           <div className="input-group-prepend">
                               <span className="input-group-text">Date de début :</span>
                           </div>
                           <input type="date" value={this.state.startdate} onChange={this.handlestartdateChange}
                                  className="form-control" id="date de début" placeholder="Date de début"/>
                       </div>
-                      <div className="from-group mb-3 col-xl-5">
+                      <div className="from-group mb-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                           <div className="input-group-prepend">
                               <span className="input-group-text">Date de fin théorique:</span>
                           </div>
@@ -114,7 +114,7 @@ class Addtask extends React.Component {
                   </div>
                       <div className="row">
                               <p className="col-xl-2">Me notifier </p>
-                              <div className="col-xl-3">
+                              <div className="col-xl-2">
                                   <input type="number" value={this.state.time} onChange={this.handleTimeChange}  className="form-control" id="date de début" placeholder=""/>
                               </div>
                               <div className="col-xl-2">
@@ -127,7 +127,7 @@ class Addtask extends React.Component {
                       </div>
                     <br/>
 				  <div className ="row">
-					  <div className="col-xl-10">
+					  <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					    <textarea className="form-control" value={this.state.comment} onChange={this.handleCommentChange} id="Commentaires" placeholder="Commentaires"/>
 					  </div>
 				  </div>

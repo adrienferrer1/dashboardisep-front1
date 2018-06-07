@@ -11,18 +11,20 @@ import Gantt from './gantt';
 class Planification extends Component {
     render() {
     	return (
-    		<div className="Planification">
-				<br></br>
-				<div className="row">
-                    <h5> Planification </h5>
+            <div className="Planification" className="container row">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <br/>
+                    <p> </p>
+					<div className="card container">
+						<br></br>
+						<Addtask></Addtask>
+						<Addphase/>
+						<Taskattribution/>
+						<Tasklist/>
+						<Gantt/>
+					</div>
 				</div>
-    			<Addtask></Addtask>
-				<Addphase/>
-				<Taskattribution/>
-				<Tasklist/>
-        <Gantt/>
-
-	    	</div>
+			</div>
     		);
     }
 }

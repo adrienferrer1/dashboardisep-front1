@@ -43,14 +43,20 @@ class Addphase extends Component {
                         <div class="form-group col-xl-6">
                             <input type="text" value={this.state.name} onChange={this.handlenameChange} class="form-control" id="Intitulé" placeholder="Intitulé"/>
                         </div>
-                            <div class="form-group col-xl-3">
-                                <p class="">date de début : </p>
-                                <input type="date" value={this.state.start_date} onChange={this.handlestart_dateChange} class=" form-control" id="date de fin théorique" placeholder="Date de début"/>
+                        <div className="from-group mb-3 col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Date de début :</span>
                             </div>
-                            <div class="form-group col-xl-3">
-                                <p class="">date de fin : </p>
-                                <input type="date" value={this.state.end_date} onChange={this.handleend_dateChange} class=" form-control" id="date de fin théorique" placeholder="Date de fin théorique"/>
+                            <input type="date" value={this.state.start_date} onChange={this.handlestart_dateChange}
+                                   className="form-control" id="date de début" placeholder="Date de début"/>
+                        </div>
+                        <div className="from-group mb-3 col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Date de fin :</span>
                             </div>
+                            <input type="date" value={this.state.end_date} onChange={this.handleend_dateChange}
+                                   className="form-control" id="date de fin" placeholder="Date de fin"/>
+                        </div>
                     </div>
                     <div class ="row">
                         <div class="col-xl-6">
