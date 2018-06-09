@@ -47,4 +47,3 @@ const PersonRow = (props) => {
 }
 
 export default Memberlist;
-

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios/index";
 
 class Tutor extends React.Component {
     constructor() {
@@ -14,12 +15,17 @@ class Tutor extends React.Component {
         this.setState({active_tutor: event.target.value});
     }
     handleTutorSubmit(){
-        alert('Votre tuteur : '+this.state.active_tutor+' a été assigné');
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        console.log(this.state.active_tutor);
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/users/associateGroupToTutor/'+this.state.active_tutor,{groupId : parseInt(sessionStorage.getItem('group_id'))}).then(function (response) {
+            console.log(response);
+        })
+        alert('Votre tuteur a été assigné');
     }
     render () {
         let tutors = this.props.state.tutors;
         let optionItems = tutors.map((tutor) =>
-                <option key={tutor.name}>{tutor.name} {tutor.lastname}</option>
+                <option value={tutor.id}>{tutor.name} {tutor.lastname}</option>
             );
 
         return (
@@ -28,6 +34,9 @@ class Tutor extends React.Component {
                  <option value='' disabled selected>Choisir votre tuteur</option>
                 {optionItems}
              </select>
+             <button className="btn btn-primary mx-auto" onClick={this.handleTutorSubmit}> Assigner le tuteur</button>
+
+
          </div>
         )
     }
