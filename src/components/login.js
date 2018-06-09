@@ -8,7 +8,7 @@ import { browserHistory } from 'react-router';
 class mail1 extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {mail1: '', password:'', mail:'', password1:'',password2:'', name:'', lastname:''};
+        this.state = {mail1: '', password:'', mail:'', password1:'',password2:'', name:'', lastname:'',role:''};
         //mail1 Form
         this.handlemail1Change = this.handlemail1Change.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -30,13 +30,22 @@ class mail1 extends React.Component {
         this.setState({password: event.target.value});
     }
     handleLoginSubmit(event) {
+        event.preventDefault();
         axios.post('https://back-dashboardisep.projects.jcloud.fr/login',{email: this.state.mail1, password: this.state.password}).then(function (response) {
             sessionStorage.setItem('token', response.headers.authorization);
-            window.location.replace("/Welcome");
         }).catch(function (error) {
             alert("Votre identifiant ou votre mot de passe est erroné");
         });
-        event.preventDefault();
+        let role;
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me').then(response => {
+            role = response.data.role;
+            sessionStorage.setItem('role', response.data.role);
+            this.setState({role});
+            console.log(this.setState);
+            window.location.replace("/Welcome");
+        });
+
     }
     //Subscribe Form Handle functions
     handleNameChange(event) {

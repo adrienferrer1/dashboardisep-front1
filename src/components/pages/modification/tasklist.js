@@ -12,6 +12,7 @@ class Tasklist extends React.Component {
         super();
         this.state = {
             tasks: [],
+            test:'',
         }
         this.myRef = React.createRef();
     }
@@ -61,7 +62,7 @@ class Tasklist extends React.Component {
     }
 }
 
-const TaskRow = (props) => {
+function TaskRow(props,foo){
     return (
         <tr>
             <td>
@@ -80,13 +81,18 @@ const TaskRow = (props) => {
                 { student_lastname(props.data) }
             </td>
             <td>
-                <button ref={this.myRef}  className="btn btn-outline-primary">Modifier</button>
+                <button className="btn btn-outline-primary" onClick={()=>hello()}>Modifier</button>
             </td>
             <td>
                 <button className="btn btn-outline-danger">Supprimer</button>
             </td>
         </tr>
     );
+}
+function hello() {
+    let test;
+    test = "hello";
+    alert(test);
 }
 
 function timeConverter(UNIX_timestamp){

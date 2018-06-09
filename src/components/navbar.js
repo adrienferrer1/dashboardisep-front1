@@ -9,6 +9,7 @@ class Navbar extends React.Component {
     }
     handleLogoutClick(event) {
         sessionStorage.setItem('token', '');
+        sessionStorage.setItem('role', '');
         window.location.replace("/Login");
         event.preventDefault();
     }

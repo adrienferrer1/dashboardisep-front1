@@ -20,12 +20,12 @@ class App extends React.Component {
         super(props);
         //this.handleLoginClick = this.handleLoginClick.bind(this);
         //this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLogged: sessionStorage.getItem('token')}; // A REMPLACER PAR LE RENVOI DE L'API
+        this.state = {isLogged: sessionStorage.getItem('token'),role: sessionStorage.getItem('role')}; // A REMPLACER PAR LE RENVOI DE L'API
     }
     render() {
         return (
             <div className="App">
-                <App_logged isLogged={this.state.isLogged}/>
+                <App_logged isLogged={this.state.isLogged} role={this.state.role}/>
             </div>
         );
     }
@@ -34,25 +34,91 @@ class App extends React.Component {
 function App_logged(foo) {
     const isLogged = foo.isLogged;
     if (isLogged !== '' && isLogged !==null){
-        return(
-            <div className="App" className="row">
-                <Navbar></Navbar>
-                <Menu></Menu>
-                <Router>
-                    <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
-                        <Route path="/welcome" component={Welcome}/>
-                        <Route path="/groupmanagement" component={Groupmanagement}/>
-                        <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
-                        <Route path="/Planification" component={Planification}/>
-                        <Route path="/Login" component={Login}/>
-                        <Route path="/Tracking" component={Tracking}/>
-                        <Route path="/Studenttracking" component={Studenttracking}/>
-                        <Route path="/Modification" component={Modification}/>
+        switch (foo.role){
+            case "0":
+                return(
+                    <div className="App" className="row">
+                        <Navbar></Navbar>
+                        <Menu></Menu>
+                        <Router>
+                            <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
+                                <Route path="/welcome" component={Welcome}/>
+                                <Route path="/groupmanagement" component={Groupmanagement}/>
+                                <Route path="/Planification" component={Planification}/>
+                                <Route path="/Login" component={Login}/>
+                                <Route path="/Tracking" component={Tracking}/>
+                                <Route path="/Studenttracking" component={Studenttracking}/>
+                                <Route path="/Modification" component={Modification}/>
+                            </div>
+                        </Router>
                     </div>
-                </Router>
-            </div>
-        )
-    }
+
+                );
+            break;
+            case "1":
+                return(
+                    <div className="App" className="row">
+                        <Navbar></Navbar>
+                        <Menu></Menu>
+                        <Router>
+                            <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
+                                <Route path="/welcome" component={Welcome}/>
+                                <Route path="/groupmanagement" component={Groupmanagement}/>
+                                <Route path="/Planification" component={Planification}/>
+                                <Route path="/Login" component={Login}/>
+                                <Route path="/Tracking" component={Tracking}/>
+                                <Route path="/Studenttracking" component={Studenttracking}/>
+                                <Route path="/Modification" component={Modification}/>
+                            </div>
+                        </Router>
+                    </div>
+
+                );
+                break;
+            case "2":
+                return(
+                    <div className="App" className="row">
+                        <Navbar></Navbar>
+                        <Menu></Menu>
+                        <Router>
+                            <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
+                                <Route path="/welcome" component={Welcome}/>
+                                <Route path="/groupmanagement" component={Groupmanagement}/>
+                                <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
+                                <Route path="/Planification" component={Planification}/>
+                                <Route path="/Login" component={Login}/>
+                                <Route path="/Tracking" component={Tracking}/>
+                                <Route path="/Studenttracking" component={Studenttracking}/>
+                                <Route path="/Modification" component={Modification}/>
+                            </div>
+                        </Router>
+                    </div>
+
+                );
+                break;
+            case "3":
+                return(
+                    <div className="App" className="row">
+                        <Navbar></Navbar>
+                        <Menu></Menu>
+                        <Router>
+                            <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
+                                <Route path="/welcome" component={Welcome}/>
+                                <Route path="/groupmanagement" component={Groupmanagement}/>
+                                <Route path="/Tutorsmanagement" component={Tutorsmanagement}/>
+                                <Route path="/Planification" component={Planification}/>
+                                <Route path="/Login" component={Login}/>
+                                <Route path="/Tracking" component={Tracking}/>
+                                <Route path="/Studenttracking" component={Studenttracking}/>
+                                <Route path="/Modification" component={Modification}/>
+                            </div>
+                        </Router>
+                    </div>
+
+                );
+                break;
+            }
+        }
     else{
         return(
             <div className="App" className="container row">

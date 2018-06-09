@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Tasklist from './tasklist';
-import Test_table from './test_table';
 
 class Modification extends Component {
     render() {
@@ -12,7 +11,6 @@ class Modification extends Component {
                     <div className="card container">
                         <div className="row">
                         <Tasklist/>
-                            <Test_table/>
 
 
                         </div>
