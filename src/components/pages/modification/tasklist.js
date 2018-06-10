@@ -25,22 +25,39 @@ class Tasklist extends React.Component {
             title:'',
             startdate:'',
             enddate:'',
+            comment:'',
+            task_id:'',
             modalIsOpen: false,
             tasks: [],
             test:'',
         }
         this.openModal=this.openModal.bind(this);
         this.closeModal=this.closeModal.bind(this);
+        this.postModal=this.postModal.bind(this);
         this.handleTitleChange=this.handleTitleChange.bind(this);
         this.handleStartdateChange=this.handleStartdateChange.bind(this);
+        this.handleEnddateChange=this.handleEnddateChange.bind(this);
+        this.handleCommentChange=this.handleCommentChange.bind(this);
     }
 
     //MODAL STUFF
     openModal(task_id) {
         this.setState({modalIsOpen: true});
-        console.log(task_id);
+        this.setState({task_id : task_id});
+
         //hello(task_id);
     }
+    postModal(){
+        alert(this.state.task_id);
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.put('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: this.state.startdate, end_date: this.state.enddate}).then(function (response){
+            alert(response);
+        }).catch(function (error){
+            alert(error);
+        })
+        alert("ggg");
+    }
+
     closeModal() {
         this.setState({modalIsOpen: false});
     }
@@ -53,10 +70,14 @@ class Tasklist extends React.Component {
     handleStartdateChange(event){
         this.setState({startdate: event.target.value})
     }
+
     handleEnddateChange(event){
         this.setState({enddate: event.target.value})
     }
 
+    handleCommentChange(event){
+        this.setState({comment: event.target.value})
+    }
 
     componentDidMount(){
         let tasks = [];
@@ -121,15 +142,12 @@ class Tasklist extends React.Component {
                         </div>
                         <div className="row container">
                             Commentaires :
-                            <textarea className="form-control mb-3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" aria-label="With textarea"></textarea>
+                            <textarea value={this.state.comment} onChange={this.handleCommentChange} className="form-control mb-3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" aria-label="With textarea"></textarea>
                         </div>
-                        <button className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 btn btn-primary" onClick={this.closeModal}>Valider les modifications</button>
+                        <button className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 btn btn-primary" onClick={this.postModal}>Valider les modifications</button>
                         <p></p>
-
                     </form>
                 </Modal>
-
-
                 <br></br>
                 <h5>Liste des tâches</h5>
                 <table className="col-xl-12 table">
@@ -162,9 +180,6 @@ function TaskRow(props){
             </td>
         </tr>
     );
-}
-function hello(task_id) {
-    alert(task_id);
 }
 
 function timeConverter(UNIX_timestamp){
