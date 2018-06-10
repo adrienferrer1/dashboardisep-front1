@@ -103,8 +103,8 @@ class Tasklist extends React.Component {
                             Commentaires :
                             <textarea className="form-control mb-3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" aria-label="With textarea"></textarea>
                         </div>
-                        <button className="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6 btn btn-primary" onClick={this.closeModal}>Annuler</button>
-                        <br/>
+                        <button className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 btn btn-primary" onClick={this.closeModal}>Valider les modifications</button>
+                        <p></p>
 
                     </form>
                 </Modal>
