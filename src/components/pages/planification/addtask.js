@@ -115,7 +115,7 @@ class Addtask extends React.Component {
                       <div className="row">
                               <p className="col-xl-2">Me notifier </p>
                               <div className="col-xl-2">
-                                  <input type="number" value={this.state.time} onChange={this.handleTimeChange}  className="form-control" id="date de début" placeholder=""/>
+                                  <input type="number" min="0" value={this.state.time} onChange={this.handleTimeChange}  className="form-control" id="date de début" placeholder=""/>
                               </div>
                               <div className="col-xl-2">
                                   <select selected="selected" value={this.state.unit} className="form-control" onChange={this.handleUnitChange}>

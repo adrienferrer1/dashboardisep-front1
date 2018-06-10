@@ -35,27 +35,6 @@ function App_logged(foo) {
     const isLogged = foo.isLogged;
     if (isLogged !== '' && isLogged !==null){
         switch (foo.role){
-            case "null":
-                return(
-                    <div className="App" className="row">
-                        <Navbar></Navbar>
-                        <Menu></Menu>
-                        <Router>
-                            <div className="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
-                                <Route path="/welcome" component={Welcome}/>
-                                <Route path="/groupmanagement" component={Groupmanagement}/>
-                                <Route path="/Planification" component={Planification}/>
-                                <Route path="/Login" component={Login}/>
-                                <Route path="/Tracking" component={Tracking}/>
-                                <Route path="/Studenttracking" component={Studenttracking}/>
-                                <Route path="/Modification" component={Modification}/>
-                            </div>
-                        </Router>
-                    </div>
-
-                );
-                break;
-
             case "0":
                 return(
                     <div className="App" className="row">

@@ -76,6 +76,7 @@ class Gantt extends Component {
 
         return (
             <div className="col-12">
+                <h5>Digramme de Gantt</h5>
               {this.getTaskListGantt()}
 
                     <div className={'my-pretty-chart-container'}>
