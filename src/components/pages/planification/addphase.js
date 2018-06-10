@@ -24,13 +24,23 @@ class Addphase extends Component {
         this.setState({description: event.target.value});
     }
     handleSubmit(event) {
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/phases/add',{name: this.state.name, description: this.state.description, start_date: this.state.start_date, end_date: this.state.end_date}).then(function (response) {
-            console.log(response);
-            alert('Votre phase a bien été ajoutée');
-        }).catch(function (error) {
-            console.log(error);
-            alert('Une erreur est survenue : '+error);
-        });
+        var data = {name: this.state.name,
+          description: this.state.description,
+          start_date: this.state.start_date,
+          end_date: this.state.end_date};
+
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me')
+          .then(response => {
+            if (response.data.group != null){
+              axios.post('https://back-dashboardisep.projects.jcloud.fr/phases/add/'+response.data.group.id, data ).then(response => {
+                alert('Votre phase a bien été ajoutée');
+              }).catch(function (error) {
+                  console.log(error);
+                  alert('Une erreur est survenue : '+error);
+              });
+            }
+          });
         event.preventDefault();
     }
     render() {
