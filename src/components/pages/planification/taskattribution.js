@@ -42,10 +42,12 @@ class Taskattribution extends React.Component {
       var optionEleves = [];
       axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me', header)
         .then(response => {
-          axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+response.data.group.id, header ).then(response => {
-            optionEleves = response.data.students.map(student => { return student.name})
-                this.setState({optionEleves})
-              })
+          if (response.data.group != null){
+            axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+response.data.group.id, header ).then(response => {
+              optionEleves = response.data.students.map(student => { return student.name})
+              this.setState({optionEleves})
+            })
+          }
         });
     }
 
