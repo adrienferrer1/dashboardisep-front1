@@ -26,7 +26,6 @@ class Groupcreation extends React.Component {
     }
     handlestudentChange(event) {
         this.setState({student: event.target.value});
-
     }
     handlegroupSubmit(event) {
         event.preventDefault();
