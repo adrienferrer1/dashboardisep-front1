@@ -22,13 +22,20 @@ class Tasklist extends React.Component {
     constructor() {
         super();
         this.state = {
+            title:'',
+            startdate:'',
+            enddate:'',
             modalIsOpen: false,
             tasks: [],
             test:'',
         }
         this.openModal=this.openModal.bind(this);
         this.closeModal=this.closeModal.bind(this);
+        this.handleTitleChange=this.handleTitleChange.bind(this);
+        this.handleStartdateChange=this.handleStartdateChange.bind(this);
     }
+
+    //MODAL STUFF
     openModal(task_id) {
         this.setState({modalIsOpen: true});
         console.log(task_id);
@@ -37,6 +44,19 @@ class Tasklist extends React.Component {
     closeModal() {
         this.setState({modalIsOpen: false});
     }
+
+    //MODAL FORM CONTROL
+    handleTitleChange(event){
+        this.setState({title: event.target.value})
+    }
+
+    handleStartdateChange(event){
+        this.setState({startdate: event.target.value})
+    }
+    handleEnddateChange(event){
+        this.setState({enddate: event.target.value})
+    }
+
 
     componentDidMount(){
         let tasks = [];
@@ -78,7 +98,7 @@ class Tasklist extends React.Component {
                     <form id="addtask">
                         <div className="row">
                             <div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <input type="text" value='' onChange=''
+                                <input type="text" value={this.state.title} onChange={this.handleTitleChange}
                                        className="form-control" id="Intitulé" placeholder="Intitulé"/>
                             </div>
                         </div>
@@ -87,14 +107,14 @@ class Tasklist extends React.Component {
                                 <div className="input-group-prepend">
                                     <span className="input-group-text">Date de début :</span>
                                 </div>
-                                <input type="date" value='' onChange=''
+                                <input type="date" value={this.state.startdate} onChange={this.handleStartdateChange}
                                        className="form-control" id="date de début" placeholder="Date de début"/>
                             </div>
                             <div className="from-group mb-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text">Date de fin théorique:</span>
                                 </div>
-                                <input type="date" value='' onChange=''
+                                <input type="date" value={this.state.enddate} onChange={this.handleEnddateChange}
                                        className="form-control" id="date de fin théorique"
                                        placeholder="Date de fin théorique"/>
                             </div>
