@@ -34,6 +34,7 @@ class Tasklist extends React.Component {
         this.openModal=this.openModal.bind(this);
         this.closeModal=this.closeModal.bind(this);
         this.postModal=this.postModal.bind(this);
+        this.deleteTask=this.deleteTask.bind(this);
         this.handleTitleChange=this.handleTitleChange.bind(this);
         this.handleStartdateChange=this.handleStartdateChange.bind(this);
         this.handleEnddateChange=this.handleEnddateChange.bind(this);
@@ -50,6 +51,7 @@ class Tasklist extends React.Component {
     postModal(){
         alert(this.state.task_id);
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        alert(sessionStorage.getItem('token'));
         axios.put('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: this.state.startdate, end_date: this.state.enddate}).then(function (response){
             alert(response);
         }).catch(function (error){
@@ -60,6 +62,13 @@ class Tasklist extends React.Component {
 
     closeModal() {
         this.setState({modalIsOpen: false});
+    }
+
+    deleteTask(task_id) {
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.delete('https://back-dashboardisep.projects.jcloud.fr/tasks/one/' + task_id).then(function (response) {
+            console.log(response);
+        })
     }
 
     //MODAL FORM CONTROL
@@ -97,7 +106,7 @@ class Tasklist extends React.Component {
             return (<div>
                         <TaskRow key = {task} data = {task} />
                         <button className="btn btn-outline-primary" onClick={()=>this.openModal(task.id)}>Modifier</button>
-                        <button className="btn btn-outline-danger">Supprimer</button>
+                        <button className="btn btn-outline-danger" onClick={()=>this.deleteTask(task.id)}>Supprimer</button>
                         <p></p>
                     </div>)
 
