@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1836">
-              <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+            <state relative-caret-position="2510">
+              <caret line="208" selection-start-line="208" selection-end-line="212" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="n#!!block;n#TaskRow#0" />
@@ -32,14 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groupcreation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
+      <file leaf-file-name="addtask.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="884">
+              <caret line="95" column="93" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -65,6 +62,8 @@
       <find>student_id</find>
       <find>height</find>
       <find>force</find>
+      <find>this.state.phase</find>
+      <find>phase</find>
     </findStrings>
     <replaceStrings>
       <replace>TaskRow</replace>
@@ -113,15 +112,15 @@
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
         <option value="$PROJECT_DIR$/src/components/menu.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addphase.js" />
         <option value="$PROJECT_DIR$/src/components/login.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/mark_task.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/gantt.js" />
         <option value="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/gantt.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
       </list>
     </option>
   </component>
@@ -282,12 +281,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="6236000" />
+      <workItem from="1528800098330" duration="9281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186099000" />
+    <option name="totallyTimeSpent" value="189144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -556,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="117" column="61" selection-start-line="117" selection-start-column="61" selection-end-line="117" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
@@ -629,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/gantt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/memberlist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -660,6 +645,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/gantt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/groupcreation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -672,14 +664,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+        <state relative-caret-position="2510">
+          <caret line="208" selection-start-line="208" selection-end-line="212" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="n#!!block;n#TaskRow#0" />
             <element signature="n#!!block;n#student_name#0" />
             <element signature="n#!!block;n#student_lastname#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="95" column="93" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
         </state>
       </provider>
     </entry>

@@ -43,6 +43,7 @@ class Addtask extends React.Component {
       this.getPhaseOption();
     }
     handleSubmit(event) {
+        event.preventDefault();
 
         ///////////
 
@@ -56,22 +57,24 @@ class Addtask extends React.Component {
          start_date: new Date (this.state.startdate).getTime(),
          end_date: new Date (this.state.enddate).getTime()
         }
+        console.log(this.state.options);
       var header = { headers: { Authorization: sessionStorage.getItem('token') }};
-      /*  axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add' + this.state.phase, data, header).then(function (response) {
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add/' + this.state.phase, data, header).then(function (response) {
             console.log(response);
             alert('Votre tâche a bien été ajoutée');
         }).catch(function (error) {
             console.log(error);
             alert('Une erreur est survenue : '+error);
-        });*/
-        event.preventDefault();
+        });
+
     }
 
     getPhaseOption(){
       var options = [];
       axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
-            options = response.data.phases.map(phase => {return phase.name})
+            options = response.data.phases.map(phase => {return {phase}})
             this.setState({options})
+            console.log(this.state.options);
           });
     }
 
@@ -90,7 +93,7 @@ class Addtask extends React.Component {
                                   name="Phase" form="addtask">
                               <option value="" disabled selected>Sélectionner une phase</option>
                               {this.state.options.map(option => {
-                                  return <option value={option} key={option}>{option}</option>
+                                  return <option key={option.phase.id} value={option.phase.id}>{option.phase.name}</option>
                               })}
                           </select>
                       </div>
