@@ -16,7 +16,13 @@ class Taskattribution extends React.Component {
         this.setState({student: event.target.value});
     }
     handleSubmit(event) {
-        alert(this.state.phase  + this.state.student);
+        alert(this.state.phase  + " ---> "+ this.state.student);
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/addStudentToTask/' + this.state.phase, {userId: this.state.student}).then(function (response) {
+              alert('Votre tâche a bien été assignée');
+          }).catch(function (error) {
+              alert('Une erreur est survenue : '+error);
+          });
         event.preventDefault();
     }
 
@@ -30,7 +36,7 @@ class Taskattribution extends React.Component {
       axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
         response.data.phases.map(phase => {
           phase.tasks.map(task => {
-            optionsTask.push(task.name)
+            optionsTask.push([task.name, task.id])
           })
         })
             this.setState({optionsTask})
@@ -44,7 +50,7 @@ class Taskattribution extends React.Component {
         .then(response => {
           if (response.data.group != null){
             axios.get('https://back-dashboardisep.projects.jcloud.fr/groups/getStudents/'+response.data.group.id, header ).then(response => {
-              optionEleves = response.data.students.map(student => { return student.name})
+              response.data.students.map(student => {optionEleves.push([student.name, student.id])})
               this.setState({optionEleves})
             })
           }
@@ -61,13 +67,13 @@ class Taskattribution extends React.Component {
                         <div class="form-group col-xl-6">
                             <select class="custom-select" value={this.state.phase} onChange={this.handlePhaseChange} name="choosetask">
                                 <option value="" disabled selected>Sélectionner une tâche</option>
-                                {this.state.optionsTask.map(option => {return <option value={option} key={option} >{option}</option>})}
+                                {this.state.optionsTask.map(option => {return <option value={option[1]} key={option} >{option[0]}</option>})}
                             </select>
                         </div>
                         <div class="form-group col-xl-6">
                             <select class="custom-select" value={this.state.student} onChange={this.handleStudentChange} name="choosestudent">
                                 <option value="" disabled selected>Choisir élève</option>
-                                {this.state.optionEleves.map(option => {return <option value={option} key={option} >{option}</option>})}
+                                {this.state.optionEleves.map(option => {return <option value={option[1]} key={option} >{option[0]}</option>})}
                             </select>
                         </div>
                     </div>
