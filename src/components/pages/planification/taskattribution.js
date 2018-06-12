@@ -4,7 +4,7 @@ import axios from 'axios';
 class Taskattribution extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {phase: '', student:'', optionsTask:[], optionEleves:[]};
+        this.state = {phase:'', student:'', optionsTask:[], optionEleves:[]};
         this.handlePhaseChange = this.handlePhaseChange.bind(this);
         this.handleStudentChange = this.handleStudentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,9 +16,8 @@ class Taskattribution extends React.Component {
         this.setState({student: event.target.value});
     }
     handleSubmit(event) {
-        alert(this.state.phase  + " ---> "+ this.state.student);
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/addStudentToTask/' + this.state.phase, {userId: this.state.student}).then(function (response) {
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/addStudentToTask/' + this.state.phase, {userId: parseInt(this.state.student)}).then(function (response) {
               alert('Votre tâche a bien été assignée');
           }).catch(function (error) {
               alert('Une erreur est survenue : '+error);

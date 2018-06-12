@@ -121,12 +121,6 @@ class Addtask extends React.Component {
                               <p className="col-xl-3">avant la fin de la tâche. </p>
                       </div>
                     <br/>
-				  <div className ="row">
-					  <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					    <textarea className="form-control" value={this.state.comment} onChange={this.handleCommentChange} id="Commentaires" placeholder="Commentaires"/>
-					  </div>
-				  </div>
-                    <br/>
 				  <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Valider</button>
 				</form>
 
