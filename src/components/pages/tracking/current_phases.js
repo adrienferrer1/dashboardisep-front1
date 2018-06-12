@@ -28,7 +28,7 @@ class Current_phases extends Component {
         return(
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <br></br>
-                <h5>Phases en cours</h5>
+                <h5>Avancement des Phases</h5>
                 <Chart
                     graph_id="BarChart1"
                     chartType = "BarChart"

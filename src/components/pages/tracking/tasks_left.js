@@ -38,7 +38,6 @@ class Tasks_left extends React.Component {
                     <thead>
                     <tr>
                         <th>Intitulé</th>
-                        <th>Description</th>
                         <th>Date de début</th>
                         <th>Date de fin</th>
                         <th>Durée</th>
@@ -55,9 +54,6 @@ const TaskRow = (props) => {
         <tr>
             <td>
                 { props.data.name }
-            </td>
-            <td>
-                { props.data.description }
             </td>
             <td>
                 { timeConverter(props.data.start_date)}

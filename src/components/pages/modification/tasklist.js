@@ -48,9 +48,8 @@ class Tasklist extends React.Component {
         this.setState({task_id : task_id});
     }
     postModal(){
-        alert(this.state.task_id);
+        console.log('Id de la tâche en cours de modif :'+this.state.task_id);
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        alert(sessionStorage.getItem('token'));
         axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: timeToStamp(this.state.startdate), end_date: timeToStamp(this.state.enddate)}).then(function (response){
             console.log('Modification de tâche :'+response);
         }).catch(function (error){
