@@ -30,7 +30,7 @@ class Mark_task extends React.Component {
     deleteTask(task_id) {
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         axios.delete('https://back-dashboardisep.projects.jcloud.fr/tasks/one/' + task_id).then(function (response) {
-            console.log(response);
+          alert ("task deleted")
         })
     }
 
@@ -60,12 +60,10 @@ class Mark_task extends React.Component {
                     tasks.push(response.data[i]);
                 }
                 this.setState({tasks});
-                //console.log(this.state.tasks);
             });
     }
     render() {
         let rows = this.state.tasks.map(task => {
-            //console.log(task.id);
             return (<div>
                 <TaskRow key = {task} data = {task} />
                 <button className="btn btn-outline-danger" onClick={()=>this.deleteTask(task.id)}>Marquer comme effectuer</button>

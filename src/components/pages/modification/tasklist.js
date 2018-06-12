@@ -48,7 +48,6 @@ class Tasklist extends React.Component {
         this.setState({task_id : task_id});
     }
     postModal(){
-        console.log('Id de la tâche en cours de modif :'+this.state.task_id);
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: timeToStamp(this.state.startdate), end_date: timeToStamp(this.state.enddate)}).then(function (response){
             console.log('Modification de tâche :'+response);
@@ -64,7 +63,7 @@ class Tasklist extends React.Component {
     deleteTask(task_id) {
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/deleteOne/' + task_id).then(response => {
-            console.log(response);
+            alert ("tache surprimé")
         })
 
     }
@@ -72,7 +71,7 @@ class Tasklist extends React.Component {
     doneTask(task_id){
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/markAsDone/' + task_id).then(response => {
-            console.log(response);
+          alert("tache validée")
         })
     }
 

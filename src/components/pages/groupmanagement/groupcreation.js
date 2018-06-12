@@ -53,7 +53,7 @@ class Groupcreation extends React.Component {
             this.state.student_id=parseInt(this.state.student_id);
             console.log(this.state.student_id);
             axios.post('https://back-dashboardisep.projects.jcloud.fr/groups/associateStudentToGroup/'+this.state.group_id.toString(),{userId : this.state.student_id}).then(function (response) {
-                    console.log(response);
+                    alert("élèves ajoutés")
                 }
             )
         }

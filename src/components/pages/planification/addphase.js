@@ -30,15 +30,12 @@ class Addphase extends Component {
           end_date: new Date (this.state.end_date).getTime() /1000};
 
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        console.log(data);
         axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me')
           .then(response => {
             if (response.data.group != null){
-              console.log(response.data.group.id);
               axios.post('https://back-dashboardisep.projects.jcloud.fr/phases/add/'+response.data.group.id, data ).then(response => {
                 alert('Votre phase a bien été ajoutée');
               }).catch(function (error) {
-                  console.log(error);
                   alert('Une erreur est survenue : '+error);
               });
             }
