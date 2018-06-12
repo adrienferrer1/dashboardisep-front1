@@ -27,6 +27,10 @@ class Gantt extends Component {
                 type:'string',
               },
               {
+                id:'Resource',
+                type:'string',
+              },
+              {
                 id:'Start Date',
                 type:'date',
               },
@@ -58,9 +62,9 @@ class Gantt extends Component {
           axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
                 phases = response.data.phases
                 phases.map(p => {
-                  rows.push([p.id.toString(),p.name,new Date(p.start_date*1000),new Date(p.end_date*1000),null,0,null])
+                  rows.push([p.id.toString(),p.name,null,new Date(p.start_date*1000),new Date(p.end_date*1000),null,0,null])
                   p.tasks.map(t => {
-                      rows.push([t.id.toString(),t.name,new Date(t.start_date*1000),new Date(t.end_date*1000),null,t.done? 100 : 0,p.id.toString()])
+                      rows.push([t.id.toString(),t.name,p.id.toString(),new Date(t.start_date*1000),new Date(t.end_date*1000),null,t.done? 100 : 0,p.id.toString()])
                   });
                 });
                 console.log(rows);
@@ -80,13 +84,13 @@ class Gantt extends Component {
                 <h5>Digramme de Gantt</h5>
               {this.getTaskListGantt()}
 
-                    <div className={'my-pretty-chart-container'} width="100%" height="300px">
+                    <div className={'my-pretty-chart-container'} width="100%" height="800px">
                         <Chart
                                graph_id="ganttchart"
                                chartType = "Gantt"
                                columns={this.state.columns}
                                rows={this.state.rows}
-                               width="100%" height="300px">
+                               width="100%" height="800px">
                            </Chart>
                 </div>
 
