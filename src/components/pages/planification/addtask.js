@@ -4,8 +4,9 @@ import axios from 'axios';
 class Addtask extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {title: '', priority: '',startdate: '', enddate: '', phase:'',comment:'',time:'',unit:'', options:[]};
+        this.state = {title: '', priority: '',startdate: '', enddate: '', phase:'',comment:'',time:0,unit:'', options:[]};
         this.handleTitleChange = this.handleTitleChange.bind(this);
+        this.handleUnitChange = this.handleUnitChange.bind(this);
         this.handleEnddateChange = this.handleEnddateChange.bind(this);
         this.handlestartdateChange = this.handlestartdateChange.bind(this);
         this.handlePhaseChange = this.handlePhaseChange.bind(this);
@@ -44,22 +45,14 @@ class Addtask extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-
-        ///////////
-
-        // MAINTENENT NOUS AVONS LA DATE AINSI QUE l'UNITE POUR LA NOTIFICATION,
-        // La fonction tout tout en bas de ce code permet de convertir directement "time" en "minute"
-
-        //////////
        var data = {
          name: this.state.title,
-         description: this.state.comment,
-         start_date: new Date (this.state.startdate).getTime(),
-         end_date: new Date (this.state.enddate).getTime()
-        }
-        console.log(this.state.options);
-      var header = { headers: { Authorization: sessionStorage.getItem('token') }};
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add/' + this.state.phase, data, header).then(function (response) {
+         start_date: new Date (this.state.startdate).getTime() / 1000,
+         end_date: new Date (this.state.enddate).getTime() / 1000,
+         time : convert_to_minute (this.state.time, this.state.unit)
+       }
+      axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+      axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add/' + this.state.phase, data).then(function (response) {
             console.log(response);
             alert('Votre tâche a bien été ajoutée');
         }).catch(function (error) {
@@ -74,7 +67,6 @@ class Addtask extends React.Component {
       axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases', { headers: { Authorization: sessionStorage.getItem('token') }}).then(response => {
             options = response.data.phases.map(phase => {return {phase}})
             this.setState({options})
-            console.log(this.state.options);
           });
     }
 
@@ -143,18 +135,14 @@ class Addtask extends React.Component {
     }
 }
 
-function convert_to_minute(date,unit){
-    let time;
+function convert_to_minute(date, unit){
     if (unit=='hours'){
-        time = date * 60;
+        return date;
     }
     else if (unit=='days'){
-        time = date * 1440;
+        return date *24
     }
-    else{
-        time=date;
-    }
-    return time;
+    return date;
 }
 
 export default Addtask;
