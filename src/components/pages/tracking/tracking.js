@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Done_tasks from "./done_tasks";
 import Current_phases from "./current_phases";
 import Tasks_left from "./tasks_left";
-import Gantt_graph from "./gantt_graph";
 import Memberactivity from "./memberactivity";
 
 
@@ -18,7 +17,6 @@ class Tracking extends Component {
                             <Done_tasks/>
                             <Current_phases/>
                             <Tasks_left/>
-                            <Gantt_graph/>
                         </div>
                     </div>
                 </div>
