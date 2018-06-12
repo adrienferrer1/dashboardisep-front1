@@ -52,7 +52,7 @@ class Addtask extends React.Component {
          time : convert_to_minute (this.state.time, this.state.unit)
        }
       axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-      axios.post('https://back-dashboardisep.projects.jcloud.fr/task/add/' + this.state.phase, data).then(function (response) {
+      axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/add/' + this.state.phase, data).then(function (response) {
             console.log(response);
             alert('Votre tâche a bien été ajoutée');
         }).catch(function (error) {
