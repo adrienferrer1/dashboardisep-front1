@@ -14,11 +14,11 @@ class Current_phases extends Component {
         let phases = [];
         phases[0]=["Phase","Etat",{"role":"style"}];
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.get('https://back-dashboardisep.projects.jcloud.fr/phases/all')
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases')
             .then(response => {
-                for (var i = 0; i < response.data.length; i++) {
+                for (var i = 0; i < response.data.phases.length; i++) {
                         let phase;
-                        phase = [response.data[i].name,percentage_done(response.data[i]),"color:#ffc107"]
+                        phase = [response.data.phases[i].name,percentage_done(response.data.phases[i]),"color:#ffc107"]
                         phases.push(phase);
                 }
                 this.setState({phases});

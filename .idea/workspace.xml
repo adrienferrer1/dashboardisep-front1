@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/student_tracking/done_tasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/student_tracking/studenttracking.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/student_tracking/tasks_left.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/student_tracking/total_workedhours.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/student_tracking/workedhours.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,11 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="done_tasks.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="done_tasks.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+              <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="current_phases.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/current_phases.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -165,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/components/pages/planification/mark_task.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/gantt.js" />
         <option value="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
@@ -174,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" />
       </list>
     </option>
   </component>
@@ -310,12 +311,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="17685000" />
+      <workItem from="1528800098330" duration="17936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197548000" />
+    <option name="totallyTimeSpent" value="197799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -618,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/current_phases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -713,7 +707,14 @@
     <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/current_phases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
         </state>
       </provider>
     </entry>
