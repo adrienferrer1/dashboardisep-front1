@@ -19,16 +19,13 @@ class Tasklist extends Component {
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases')
             .then(response => {
-                //console.log(response.data.phases.length);
                 for (var i = 0; i < response.data.phases.length; i++){
                     for (var j = 0; j < response.data.phases[i].tasks.length; j++) {
-                        console.log(response.data.phases[i].tasks[j]);
                         tasks.push(response.data.phases[i].tasks[j]);
 
                     }
                 }
                 this.setState({tasks});
-                //console.log(this.state.tasks);
             });
     }
     render() {

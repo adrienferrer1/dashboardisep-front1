@@ -53,10 +53,8 @@ class Addtask extends React.Component {
        }
       axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
       axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/add/' + this.state.phase, data).then(function (response) {
-            console.log(response);
             alert('Votre tâche a bien été ajoutée');
         }).catch(function (error) {
-            console.log(error);
             alert('Une erreur est survenue : '+error);
         });
 

@@ -16,9 +16,7 @@ class Tutor extends React.Component {
     }
     handleTutorSubmit(){
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        console.log(this.state.active_tutor);
         axios.post('https://back-dashboardisep.projects.jcloud.fr/users/associateGroupToTutor/'+this.state.active_tutor,{groupId : parseInt(sessionStorage.getItem('group_id'))}).then(function (response) {
-            console.log(response);
         })
         alert('Votre tuteur a été assigné');
     }
@@ -30,7 +28,7 @@ class Tutor extends React.Component {
 
         return (
          <div className="dropdown " id="tutor-search">
-             <select selected="selected" value={this.state.active_tutor} className="form-control " onChange={this.handleSelectChange}>
+             <select required selected="selected" value={this.state.active_tutor} className="form-control " onChange={this.handleSelectChange}>
                  <option value='' disabled selected>Choisir votre tuteur</option>
                 {optionItems}
              </select>
