@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/addtask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,10 +19,11 @@
       <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2510">
-              <caret line="208" selection-start-line="208" selection-end-line="212" selection-end-column="1" />
+            <state relative-caret-position="320">
+              <caret line="74" column="82" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#!!block;n#componentDidMount#0;n#Tasklist#0" />
                 <element signature="n#!!block;n#TaskRow#0" />
                 <element signature="n#!!block;n#student_name#0" />
                 <element signature="n#!!block;n#student_lastname#0" />
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addtask.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/addtask.js">
+      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="95" column="93" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
+            <state relative-caret-position="204">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -118,9 +118,9 @@
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/mark_task.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/gantt.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" />
       </list>
     </option>
   </component>
@@ -281,12 +281,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="9281000" />
+      <workItem from="1528800098330" duration="10497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189144000" />
+    <option name="totallyTimeSpent" value="190360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -495,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/modification/table_rows.js" />
     <entry file="file://$PROJECT_DIR$/src/components/pages/modification/utils.js" />
     <entry file="file://$PROJECT_DIR$/src/components/pages/modification/test_table.js" />
@@ -539,16 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-697">
           <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/modification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -662,15 +645,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
+    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/modification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2510">
-          <caret line="208" selection-start-line="208" selection-end-line="212" selection-end-column="1" />
+        <state relative-caret-position="17">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="n#!!block;n#TaskRow#0" />
-            <element signature="n#!!block;n#student_name#0" />
-            <element signature="n#!!block;n#student_lastname#0" />
           </folding>
         </state>
       </provider>
@@ -679,6 +659,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="95" column="93" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="74" column="82" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Tasklist#0" />
+            <element signature="n#!!block;n#TaskRow#0" />
+            <element signature="n#!!block;n#student_name#0" />
+            <element signature="n#!!block;n#student_lastname#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
