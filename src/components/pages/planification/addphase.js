@@ -26,13 +26,15 @@ class Addphase extends Component {
     handleSubmit(event) {
         var data = {name: this.state.name,
           description: this.state.description,
-          start_date: this.state.start_date,
-          end_date: this.state.end_date};
+          start_date: new Date (this.state.start_date).getTime() /1000,
+          end_date: new Date (this.state.end_date).getTime() /1000};
 
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        console.log(data);
         axios.get('https://back-dashboardisep.projects.jcloud.fr/users/me')
           .then(response => {
             if (response.data.group != null){
+              console.log(response.data.group.id);
               axios.post('https://back-dashboardisep.projects.jcloud.fr/phases/add/'+response.data.group.id, data ).then(response => {
                 alert('Votre phase a bien été ajoutée');
               }).catch(function (error) {
@@ -81,6 +83,20 @@ class Addphase extends Component {
             </div>
         );
     }
+}
+
+function convert_to_minute(date,unit){
+    let time;
+    if (unit=='hours'){
+        time = date * 60;
+    }
+    else if (unit=='days'){
+        time = date * 1440;
+    }
+    else{
+        time=date;
+    }
+    return time;
 }
 
 export default Addphase;
