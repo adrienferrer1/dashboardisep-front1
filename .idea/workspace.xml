@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/total_workedhours.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/workedhours.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +19,10 @@
       <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-882">
-              <caret line="73" column="82" selection-start-line="73" selection-start-column="82" selection-end-line="73" selection-end-column="82" />
+            <state relative-caret-position="101">
+              <caret line="96" selection-start-line="96" selection-end-line="111" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="n#!!block;n#componentDidMount#0;n#Tasklist#0" />
                 <element signature="n#!!block;n#TaskRow#0" />
                 <element signature="n#!!block;n#student_name#0" />
                 <element signature="n#!!block;n#student_lastname#0" />
@@ -38,41 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskattribution.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/taskattribution.js">
+      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-544">
-              <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks_left.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="current_phases.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/current_phases.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tracking.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+            <state relative-caret-position="351">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -118,7 +81,6 @@
         <option value="$PROJECT_DIR$/src/components/pages/planification/taskattribution.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/gantt_graph.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/pages/tutorsmanagement/tutorsmanagement.js" />
         <option value="$PROJECT_DIR$/src/components/pages/welcome/welcome.js" />
@@ -157,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
       </list>
     </option>
   </component>
@@ -224,7 +187,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="tracking" type="462c0819:PsiDirectoryNode" />
+              <item name="planification" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,12 +256,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="12133000" />
+      <workItem from="1528800098330" duration="13044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191996000" />
+    <option name="totallyTimeSpent" value="192907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -643,27 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="73" column="82" selection-start-line="73" selection-start-column="82" selection-end-line="73" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Tasklist#0" />
-            <element signature="n#!!block;n#TaskRow#0" />
-            <element signature="n#!!block;n#student_name#0" />
-            <element signature="n#!!block;n#student_lastname#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/planification/taskattribution.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-544">
@@ -692,6 +634,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/modification/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="96" selection-start-line="96" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!block;n#TaskRow#0" />
+            <element signature="n#!!block;n#student_name#0" />
+            <element signature="n#!!block;n#student_lastname#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
