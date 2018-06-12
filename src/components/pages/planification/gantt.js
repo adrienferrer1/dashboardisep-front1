@@ -68,6 +68,7 @@ class Gantt extends Component {
               this.state.rows=rows;
 
 
+
           }
 
 
@@ -79,7 +80,7 @@ class Gantt extends Component {
                 <h5>Digramme de Gantt</h5>
               {this.getTaskListGantt()}
 
-                    <div className={'my-pretty-chart-container'}>
+                    <div className={'my-pretty-chart-container'} width="100%" height="300px">
                         <Chart
                                graph_id="ganttchart"
                                chartType = "Gantt"
@@ -88,7 +89,7 @@ class Gantt extends Component {
                                width="100%" height="300px">
                            </Chart>
                 </div>
-                window.location.reload()
+
 
                     </div>);
     }
