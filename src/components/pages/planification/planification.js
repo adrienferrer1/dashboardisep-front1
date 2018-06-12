@@ -5,7 +5,6 @@ import Addphase from './addphase';
 import Taskattribution from './taskattribution';
 import Tasklist from './tasklist';
 import Gantt from './gantt';
-import Mark_task from './mark_task';
 
 
 
@@ -22,7 +21,6 @@ class Planification extends Component {
 						<Addphase/>
 						<Taskattribution/>
 						<Tasklist/>
-						<Mark_task/>
 						<Gantt/>
 					</div>
 				</div>

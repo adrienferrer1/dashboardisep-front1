@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/mark_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/planification/planification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planification/planification.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,32 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gantt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/gantt.js">
+      <file leaf-file-name="planification.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/planification/planification.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="93" column="27" lean-forward="true" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tracking.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="374">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -118,7 +98,6 @@
         <option value="$PROJECT_DIR$/src/components/pages/planification/addphase.js" />
         <option value="$PROJECT_DIR$/src/components/login.js" />
         <option value="$PROJECT_DIR$/src/components/pages/groupmanagement/tutorsearch.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/mark_task.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/gantt.js" />
         <option value="$PROJECT_DIR$/src/components/pages/modification/tasklist.js" />
@@ -131,6 +110,7 @@
         <option value="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
         <option value="$PROJECT_DIR$/src/components/menu.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/planification/planification.js" />
       </list>
     </option>
   </component>
@@ -198,7 +178,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="tracking" type="462c0819:PsiDirectoryNode" />
+              <item name="planification" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -267,12 +247,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="19616000" />
+      <workItem from="1528800098330" duration="20088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199479000" />
+    <option name="totallyTimeSpent" value="199951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -486,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/planification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/groupmanagement/assigntutor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -588,20 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/mark_task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="n#!!block;n#TaskRow#0" />
-            <element signature="n#!!block;n#timeConverter#0" />
-            <element signature="n#!!block;n#student_name#0" />
-            <element signature="n#!!block;n#student_lastname#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -671,6 +630,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/mark_task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!block;n#TaskRow#0" />
+            <element signature="n#!!block;n#timeConverter#0" />
+            <element signature="n#!!block;n#student_name#0" />
+            <element signature="n#!!block;n#student_lastname#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/planification/planification.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
