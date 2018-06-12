@@ -20,9 +20,6 @@ class Menu extends React.Component {
                         <a className="list-group-item list-group-item-action" href="/Modification"
                            role="tab">Modification</a>
                         <a className="list-group-item list-group-item-action" href="/Tracking" role="tab">Suivi</a>
-                        <a className="list-group-item list-group-item-action" href="#" role="tab">Reporting</a>
-                        <a className="list-group-item list-group-item-action" href="/Studenttracking" role="tab">Suivi
-                            Elève</a>
                     </div>
                 </div>);
 				break;
@@ -39,8 +36,7 @@ class Menu extends React.Component {
                                role="tab">Modification</a>
                             <a className="list-group-item list-group-item-action" href="/Tracking" role="tab">Suivi</a>
                             <a className="list-group-item list-group-item-action" href="#" role="tab">Reporting</a>
-                            <a className="list-group-item list-group-item-action" href="/Studenttracking" role="tab">Suivi
-                                Elève</a>
+
                         </div>
                     </div>);
                 break;
@@ -59,8 +55,7 @@ class Menu extends React.Component {
                            role="tab">Modification</a>
                         <a className="list-group-item list-group-item-action" href="/Tracking" role="tab">Suivi</a>
                         <a className="list-group-item list-group-item-action" href="#" role="tab">Reporting</a>
-                        <a className="list-group-item list-group-item-action" href="/Studenttracking" role="tab">Suivi
-                            Elève</a>
+
                     </div>
                 </div>);
             break;

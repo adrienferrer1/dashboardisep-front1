@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eed419b-e9e0-4533-a1b8-c428bfc1cfbf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +25,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tracking.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tracking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/pages/tracking/tracking.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -113,12 +125,12 @@
         <option value="$PROJECT_DIR$/src/components/pages/planification/tasklist.js" />
         <option value="$PROJECT_DIR$/src/components/pages/planification/addtask.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/menu.js" />
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tasks_left.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/done_tasks.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/current_phases.js" />
         <option value="$PROJECT_DIR$/src/components/pages/tracking/tracking.js" />
+        <option value="$PROJECT_DIR$/src/components/menu.js" />
       </list>
     </option>
   </component>
@@ -255,12 +267,12 @@
       <workItem from="1528543313747" duration="23456000" />
       <workItem from="1528622230439" duration="17383000" />
       <workItem from="1528707331548" duration="9287000" />
-      <workItem from="1528800098330" duration="19156000" />
+      <workItem from="1528800098330" duration="19616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199019000" />
+    <option name="totallyTimeSpent" value="199479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -576,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="119" selection-start-line="79" selection-start-column="119" selection-end-line="79" selection-end-column="119" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/planification/mark_task.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-870">
@@ -659,6 +661,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
