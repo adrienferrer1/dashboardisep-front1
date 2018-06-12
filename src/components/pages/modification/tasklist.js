@@ -45,19 +45,16 @@ class Tasklist extends React.Component {
     openModal(task_id) {
         this.setState({modalIsOpen: true});
         this.setState({task_id : task_id});
-
-        //hello(task_id);
     }
     postModal(){
         alert(this.state.task_id);
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         alert(sessionStorage.getItem('token'));
-        axios.put('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: this.state.startdate, end_date: this.state.enddate}).then(function (response){
-            alert(response);
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/modify/'+this.state.task_id,{name: this.state.title, description: this.state.comment, start_date: timeToStamp(this.state.startdate), end_date: timeToStamp(this.state.enddate)}).then(function (response){
+            console.log('Modification de tâche :'+response);
         }).catch(function (error){
-            alert(error);
+            console.log('Erreur lors de la modification de tâche :'+error);
         })
-        alert("ggg");
     }
 
     closeModal() {
@@ -66,9 +63,10 @@ class Tasklist extends React.Component {
 
     deleteTask(task_id) {
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/deleteOne/' + task_id).then(function (response) {
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/deleteOne/' + task_id).then(response => {
             console.log(response);
         })
+
     }
 
     //MODAL FORM CONTROL
@@ -206,6 +204,12 @@ function timeConverter(UNIX_timestamp){
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year ;
     return time;
+}
+
+function timeToStamp(date1){
+    var timestamp;
+    timestamp=(Date.parse(date1))/1000;
+    return timestamp;
 }
 
 function student_name(foo){
