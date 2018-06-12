@@ -12,11 +12,14 @@ class Tasks_left extends React.Component {
     componentDidMount(){
         let tasks = [];
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases')
             .then(response => {
-                for (var i = 0; i < response.data.length; i++){
-                    if (response.data[i].done==false) {
-                        tasks.push(response.data[i]);
+                for (var i = 0; i < response.data.phases.length; i++){
+                    for (var j = 0; j < response.data.phases[i].tasks.length; j++) {
+                        if (response.data.phases[i].tasks[j].done==false) {
+                            console.log(response.data.phases[i].tasks[j]);
+                            tasks.push(response.data.phases[i].tasks[j]);
+                        }
                     }
                 }
                 this.setState({tasks});

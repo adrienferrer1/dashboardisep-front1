@@ -13,11 +13,14 @@ class Done_tasks extends React.Component {
     componentDidMount(){
         let done_tasks = [];
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases')
             .then(response => {
-                for (var i = 0; i < response.data.length; i++) {
-                    if (response.data[i].done==true) {
-                        done_tasks.push(response.data[i]);
+                for (var i = 0; i < response.data.phases.length; i++){
+                    for (var j = 0; j < response.data.phases[i].tasks.length; j++) {
+                        if (response.data.phases[i].tasks[j].done==true) {
+                            console.log(response.data.phases[i].tasks[j]);
+                            done_tasks.push(response.data.phases[i].tasks[j]);
+                        }
                     }
                 }
                 this.setState({done_tasks});
