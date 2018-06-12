@@ -66,7 +66,7 @@ class Tasklist extends React.Component {
 
     deleteTask(task_id) {
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.delete('https://back-dashboardisep.projects.jcloud.fr/tasks/one/' + task_id).then(function (response) {
+        axios.post('https://back-dashboardisep.projects.jcloud.fr/tasks/deleteOne/' + task_id).then(function (response) {
             console.log(response);
         })
     }
@@ -91,10 +91,15 @@ class Tasklist extends React.Component {
     componentDidMount(){
         let tasks = [];
         axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/all')
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/users/myGroupPhases')
             .then(response => {
-                for (var i = 0; i < response.data.length; i++){
-                    tasks.push(response.data[i]);
+                //console.log(response.data.phases.length);
+                for (var i = 0; i < response.data.phases.length; i++){
+                    for (var j = 0; j < response.data.phases[i].tasks.length; j++) {
+                        console.log(response.data.phases[i].tasks[j]);
+                        tasks.push(response.data.phases[i].tasks[j]);
+
+                    }
                 }
                 this.setState({tasks});
                 //console.log(this.state.tasks);
@@ -122,7 +127,6 @@ class Tasklist extends React.Component {
                 >
                     <br/>
                     <h4 className="mx-auto">Modification d'une tâche</h4>
-
                     <button className="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6 btn btn-warning" onClick={this.closeModal}>Annuler</button>
                     <p></p>
                     <form id="addtask">
@@ -153,14 +157,17 @@ class Tasklist extends React.Component {
                             Commentaires :
                             <textarea value={this.state.comment} onChange={this.handleCommentChange} className="form-control mb-3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" aria-label="With textarea"></textarea>
                         </div>
-                        <button className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 btn btn-primary" onClick={this.postModal}>Valider les modifications</button>
+
+                        <a onClick={this.postModal} className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 btn btn-primary">Valider les modifications</a>
+                        <br/>
+                        <br/>
+                        <a className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 btn btn-warning" onClick={this.closeModal}>Fermer</a>
                         <p></p>
                     </form>
                 </Modal>
                 <br></br>
                 <h5>Liste des tâches</h5>
                 <table className="col-xl-12 table">
-
                     < tbody > {
                         rows
                     } </tbody>
