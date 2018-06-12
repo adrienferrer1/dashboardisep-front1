@@ -85,18 +85,4 @@ class Addphase extends Component {
     }
 }
 
-function convert_to_minute(date,unit){
-    let time;
-    if (unit=='hours'){
-        time = date * 60;
-    }
-    else if (unit=='days'){
-        time = date * 1440;
-    }
-    else{
-        time=date;
-    }
-    return time;
-}
-
 export default Addphase;
