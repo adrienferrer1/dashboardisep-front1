@@ -39,6 +39,7 @@ class Tasklist extends React.Component {
         this.handleStartdateChange=this.handleStartdateChange.bind(this);
         this.handleEnddateChange=this.handleEnddateChange.bind(this);
         this.handleCommentChange=this.handleCommentChange.bind(this);
+        this.doneTask=this.doneTask.bind(this);
     }
 
     //MODAL STUFF
@@ -67,6 +68,13 @@ class Tasklist extends React.Component {
             console.log(response);
         })
 
+    }
+
+    doneTask(task_id){
+        axios.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        axios.get('https://back-dashboardisep.projects.jcloud.fr/tasks/markAsDone/' + task_id).then(response => {
+            console.log(response);
+        })
     }
 
     //MODAL FORM CONTROL
@@ -110,7 +118,8 @@ class Tasklist extends React.Component {
                         <TaskRow key = {task} data = {task} />
                         <button className="btn btn-outline-primary" onClick={()=>this.openModal(task.id)}>Modifier</button>
                         <button className="btn btn-outline-danger" onClick={()=>this.deleteTask(task.id)}>Supprimer</button>
-                        <p></p>
+                        <button className="btn btn-outline-success" onClick={()=>this.doneTask(task.id)}>Marquer comme faite</button>
+                <p></p>
                     </div>)
 
         })
